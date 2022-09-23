@@ -1,0 +1,50 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+
+  width: 152px;
+
+  @include vp-1023 {
+    width: 49px;
+  }
+
+  svg {
+    display: block;
+  }
+
+  &__icon {
+    svg {
+      width: 40px;
+      height: 32px;
+
+      @include vp-1023 {
+        width: 49px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__text {
+    margin-left: 11px;
+
+    svg {
+      width: 100px;
+      height: 10px;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+  }
+}
+
+a.header-logo {
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}

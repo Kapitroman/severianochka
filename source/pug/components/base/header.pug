@@ -2,35 +2,185 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "main.html",
-        text: "Главная"
+        href: "catalog.html",
+        text: "Каталог",
+        icon: "icon-catalog",
+        hidden: true
+      },
+      {
+        href: "favorite.html",
+        text: "Избранное",
+        icon: "icon-heart",
+        counter: 0
+      },
+      {
+        href: "orders.html",
+        text: "Заказы",
+        icon: "icon-orders",
+        counter: 0
+      },
+      {
+        href: "cart.html",
+        text: "Корзина",
+        icon: "icon-cart",
+        counter: 1
+      },
+    ]
+
+    const catalogLinks = [
+      {
+        href: "#",
+        text: "Молоко, сыр, яйцо",
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Хлеб",
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Фрукты и овощи",
+      },
+      {
+        href: "#",
+        text: "Замороженные продукты",
+      },
+      {
+        href: "#",
+        text: "Напитки",
+      },
+      {
+        href: "#",
+        text: "Кондитерские изделия",
+      },
+      {
+        href: "#",
+        text: "Чай, кофе",
+      },
+      {
+        href: "#",
+        text: "Бакалея",
+      },
+      {
+        href: "#",
+        text: "Здоровое питание",
+      },
+      {
+        href: "#",
+        text: "Зоотовары",
+      },
+      {
+        href: "#",
+        text: "Непродовольственные товары",
+      },
+      {
+        href: "#",
+        text: "Детское питание",
+      },
+      {
+        href: "#",
+        text: "Мясо, птица, колбаса",
       },
     ]
 
   header.header(class=headerMods)
     .container
-      if(currentUrl === "main.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
+
+        if(currentUrl === "Главная")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          .header-logo
+            .header-logo__icon
+              +icon("icon-headerlogo", "40", "32")
+            .header-logo__text
+              +icon("icon-headerlogotext", "100", "10")
+        else
+          a.header-logo(href="main.html", aria-label="Переход на главную")
+            .header-logo__icon
+              +icon("icon-headerlogo", "40", "32")
+            .header-logo__text
+              +icon("icon-headerlogotext", "100", "10")
+
+        .main-nav__catalog
+          +btn({
+            text: "Каталог",
+            href: "catalog.html",
+            icon: {name: "icon-catalog", left: true}
+          }).btn--none-text-width-size.btn--middle-size.btn--green
+          .catalog-menu
+            .catalog-menu__list-wrap
+             .catalog-menu__list-shadow
+              .container
+                ul.catalog-menu__list
+                  each link in catalogLinks
+                    li.catalog-menu__item
+                      if(currentUrl === link.text)
+                        span.catalog-menu__link.is-active=link.text
+                      else
+                        a.catalog-menu__link(href=link.href)=link.text
+
+        .search
+          form(method="get", action="#")
+            +custom-input({
+              inputLabelHidden: "поиск товара",
+              inputPlaceholder: "Найти товар",
+              inputType: "search",
+              inputName: "search-good",
+              inputSize: 3
+            }).custom-input--search
+            +btn({icon: {name: "icon-search"}, type: "submit"}).btn--none-text.btn--middle-size.btn--transparent
+
+        ul.main-nav__user-menu
             each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+              - const activeState = currentUrl === link.text
+              if link.hidden
+                li.main-nav__item.mobile-width-show
+                  if(activeState)
+                    a.user-menu-item.is-active(href=link.href)
+                      .user-menu-item__icon-container
+                        +icon(link.icon, 24, 24)
+                      p.user-menu-item__label=link.text
+                  else
+                    a.user-menu-item(href=link.href)
+                      .user-menu-item__icon-container
+                        +icon(link.icon, 24, 24)
+                      p.user-menu-item__label=link.text
+              else
+                li.main-nav__item
+                  if(activeState)
+                    a.user-menu-item.is-active(href=link.href)
+                      .user-menu-item__icon-container
+                        +icon(link.icon, 24, 24)
+                        if link.counter
+                          span.user-menu-item__counter=link.counter
+                      p.user-menu-item__label=link.text
+                  else
+                    a.user-menu-item(href=link.href)
+                      .user-menu-item__icon-container
+                        +icon(link.icon, 24, 24)
+                        if link.counter
+                          span.user-menu-item__counter=link.counter
+                      p.user-menu-item__label=link.text
+
+            li.main-nav__item
+              if  userAuthorized
+                .user-authorized
+                  .user-authorized__wrap
+                    a.user-authorized__link(href="#")
+                      +picture("content", "avatar", "png", 40, 40, "аватарка пользователя")
+                      span Алексей
+                    +btn({
+                      icon: {name: "icon-arrow"}
+                    }).btn--transparent.btn--middle-size.user-authorized__arrow-container
+                  .user-authorized__wrap-links
+                    ul.user-authorized__list-links
+                      li
+                        a.user-authorized__link-item(href="#") Профиль
+                      li
+                        a.user-authorized__link-item(href="#") Выйти
+              else
+                .main-nav__button-wrap
+                  +btn({
+                    text: "Войти",
+                    href: "#",
+                    icon: {name: "icon-login", left: false}
+                  }).btn--none-text-width-size.btn--middle-size.btn--orange.main-nav__login

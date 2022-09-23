@@ -18,15 +18,24 @@
 
 // Blocks
 // ---------------------------------
-
-@import "blocks/header";
-@import "blocks/main-nav";
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/btn";
+@import "blocks/intro";
+
+//forms
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+@import "blocks/search";
+
+//header
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/user-menu-item";
+@import "blocks/header-logo";
+@import "blocks/user-authorized";
+@import "blocks/catalog-menu";
 
 // ---------------------------------
 

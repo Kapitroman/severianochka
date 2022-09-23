@@ -106,7 +106,7 @@ block main
 
   header.header-ui
     nav.header-ui__nav.container
-      a.components-backwards(href="sitemap.html")
+      a.components-backwards(href="index.html")
         span &larr;
         span вернуться на разводящую
       ul.header-ui__inner-list
@@ -124,24 +124,61 @@ block main
       section(id="modals")
         h2 Modals
         p
-          +btn({text: "modal-feedback"})(data-open-modal="feedback")
+          +btn({text: "modal-feedback"})(data-open-modal="feedback").btn--max-width-250
         p
-          +btn({text: "modal-success"})(data-open-modal="success")
+          +btn({text: "modal-success"})(data-open-modal="success").btn--max-width-250
 
       section(id="buttons")
         h2 Buttons
-        +btn({text: "Текст", href: "#"})
+        +btn({text: "Текст", href: "#"}).btn--max-width-250
         p Пример вызова
         code
-          pre +btn({text: "Текст", href: "#"})
-        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+          pre +btn({text: "Текст", href: "#"}).btn--max-width-250
+
+        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red.btn--max-width-250
         p Пример вызова
         code
-          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
-        +btn({text: "Текст"})(disabled)
+          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red.btn--max-width-250
+
+        +btn({text: "Текст"})(disabled).btn--max-width-250
         p Пример вызова
         code
-          pre +btn({text: "Текст"})(disabled)
+          pre +btn({text: "Текст"})(disabled).btn--max-width-250
+
+        +btn({
+                text: "Текст",
+                href: "#",
+                icon: {name: "icon-cart", left: true}
+          }).btn--middle-size.btn--green.btn--max-width-250
+        p Пример вызова
+        code
+          pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--green.btn--max-width-250
+
+        +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: false}
+          }).btn--max-width-250
+        p Пример вызова
+        code
+          pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250
+
+        +btn({
+            href: "#",
+            icon: {name: "icon-cart"}
+          }).btn--none-text
+        p Пример вызова
+        code
+          pre +btn({href: "#", icon: {name: "icon-cart"}}).btn--none-text
+
+        +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: false}
+          }).btn--max-width-250.btn--none-text-width-size
+        p Пример вызова
+        code
+          pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250.btn--none-text-width-size
 
       section(id="form-elements")
         h2 Form elements

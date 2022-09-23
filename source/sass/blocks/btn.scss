@@ -1,18 +1,110 @@
 .btn {
   display: inline-flex;
-  margin: 10px 0;
-  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+
+  padding: 13px 13px;
+  border: 1px solid $color-outrageous-orange;
+  border-radius: 4px;
 
   color: $color-default-white;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
 
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: $color-outrageous-orange;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  transition: opacity $trans-default, box-shadow $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  svg + span {
+    margin-left: 8px;
+  }
+
+  span + svg {
+    margin-left: 8px;
+  }
+
+  span {
+    width: calc(100% - 32px - 8px);
+    text-align: center;
+
+    overflow-wrap: break-word;
+  }
+
+  &--middle-size {
+    padding: 7px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    span {
+      width: calc(100% - 24px - 8px);
+    }
+  }
+
+  &--small-size {
+    padding: 3px 7px;
+
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &--none-text {
+    width: auto;
+  }
+
+  &--none-text-width-size {
+    @include vp-1023 {
+      width: auto;
+
+      span {
+        display: none;
+      }
+
+      svg + span {
+        margin-left: 0;
+      }
+
+      span + svg {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--max-width-250 {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  &--green {
+    border: 1px solid $color-mantis;
+
+    background-color: $color-mantis;
+  }
+
+  &--orange {
+    border: 1px solid $color-outrageous-orange;
+
+    background-color: $color-outrageous-orange;
+  }
+
+  &--transparent {
+    border: 1px solid $color-transparent;
+
+    color: $color-charcoal;
+
+    background-color: $color-transparent;
   }
 
   &:disabled {
@@ -24,7 +116,13 @@
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
-      opacity: 0.8;
+      box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
+      opacity: 0.7;
+    }
+
+    &:active {
+      box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
+      opacity: 0.3;
     }
   }
 }

@@ -1,27 +1,111 @@
 .main-nav {
-  &__list {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
+  display: flex;
+  align-items: center;
 
-    list-style: none;
+  padding: 8px 0;
+
+  @include vp-1279 {
+    justify-content: space-between;
+    padding: 11px 4px;
   }
 
-  &__item {
-    margin-right: 20px;
-  }
+  .header-logo {
+    margin-right: 3.31%;
 
-  &__link {
-    color: $color-default-white;
-
-    &.is-active {
-      opacity: 0.6;
+    @include vp-1279 {
+      margin-right: 20px;
     }
   }
 
-  &__toggle {
+  &__catalog {
+    margin-right: 16px;
+
+    @include vp-1279 {
+      margin-right: 20px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+
+    .btn {
+      width: 140px;
+
+      @include vp-1023 {
+        width: auto;
+      }
+    }
+  }
+
+  .search {
+    flex-grow: 1;
+
+    max-width: 436px;
+    margin-right: 3.31%;
+
+    @include vp-1279 {
+      max-width: none;
+      margin-right: 20px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  &__user-menu  {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    max-width: 500px;
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    @include vp-767 {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      justify-content: space-between;
+
+      max-width: none;
+      margin: 0 auto;
+      padding: 3px 20px;
+      box-shadow: 0px 0px 8px 4px rgba($color-default-black, 0.1), 0px 0px 0px 4px rgba($color-default-white, 0.6);
+
+      background-color: $color-default-white;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+
+    @include vp-1279 {
+      margin-right: 16px;
+    }
+  }
+
+  &__item.mobile-width-show {
     display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
+
+  &__button-wrap {
+    padding: 8px 0;
+
+    @include vp-767 {
+      padding: 5px;
+    }
+  }
+
+  &__login {
+    width: 157px;
   }
 }
