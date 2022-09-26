@@ -47,4 +47,10 @@ a.header-logo {
       opacity: 0.7;
     }
   }
+
+  &.is-active {
+    opacity: 1;
+
+    pointer-events: none;
+  }
 }

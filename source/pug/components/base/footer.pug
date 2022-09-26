@@ -1,3 +1,77 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "О компании",
+      },
+      {
+        href: "#",
+        text: "Контакты",
+      },
+      {
+        href: "#",
+        text: "Вакансии",
+      },
+      {
+        href: "#",
+        text: "Статьи",
+      },
+      {
+        href: "#",
+        text: "Политика обработки персональных данных",
+      },
+    ]
+
+    const socialLinks = [
+      {
+        href: "#",
+        text: "Инстаграмм",
+        icon: ["icon-instagram", 20, 20],
+      },
+      {
+        href: "#",
+        text: "В контакте",
+        icon: ["icon-vkontakte", 20, 12],
+      },
+      {
+        href: "#",
+        text: "Фейсбук",
+        icon: ["icon-facebook", 20, 20],
+      },
+      {
+        href: "#",
+        text: "Одноклассники",
+        icon: ["icon-odnoklassniki", 12, 20],
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrap
+        if(currentUrl === "Главная")
+          //- lighthouse снимает 10 баллов SEO за <a> без href
+          a.footer__logo.is-active(href="main.html", aria-label="Переход на главную")
+            +icon("icon-footerlogo", "64", "44")
+        else
+          a.footer__logo(href="main.html", aria-label="Переход на главную")
+            +icon("icon-footerlogo", "64", "44")
+        ul.footer__menu
+          each link in footerLinks
+            li.footer__menu-item
+              if currentUrl === link.text
+                a.footer__menu-link.is-active(href=link.href)=link.text
+              else
+                a.footer__menu-link(href=link.href)=link.text
+        ul.footer__social
+          each link in socialLinks
+            li.footer__social-item
+              a.footer__social-link(href=link.href)
+                span.visually-hidden=link.text
+                +icon(link.icon[0], link.icon[1], link.icon[2])
+        a.footer__telefon(href="tel:+78007773333")
+          +icon("icon-phone", 24, 24)
+          span 8 800 777 33 33
+        a.footer__design(href="#")
+          span Дизайн
+          +icon("icon-zasovskiy", 100, 9)

@@ -88,7 +88,7 @@ mixin header(headerMods, currentUrl)
 
         if(currentUrl === "Главная")
           //- lighthouse снимает 10 баллов SEO за <a> без href
-          .header-logo
+          a.header-logo.is-active(href="main.html", aria-label="Переход на главную")
             .header-logo__icon
               +icon("icon-headerlogo", "40", "32")
             .header-logo__text

@@ -1,6 +1,222 @@
 .footer {
-  padding: 40px 0;
-  padding-bottom: 56px;
+  background-image: url("../img/content/pattern.png");
+  background-repeat: repeat;
+  background-size: 126px 126px;
+  background-color: $color-off-yellow;
 
-  //background-color: $color-neon-blue;
+  @include retina {
+    background-image: url("../img/content/pattern@2x.png");
+  }
+
+  @include vp-767 {
+    padding-bottom: 64px;
+  }
+
+  &__wrap {
+    display: grid;
+
+    grid-template-columns: 104px 1fr 184px 152px;
+    grid-template-rows: auto auto;
+    row-gap: 16px;
+    align-items: center;
+
+    padding: 24px 0;
+
+    @include vp-1023 {
+      grid-template-columns: 104px 1fr calc(7.61% + 24px) 152px;
+      row-gap: 8px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 112px 1fr;
+      grid-template-rows: auto auto auto auto;
+      row-gap: 0;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    display: block;
+    margin-right: 40px;
+
+    svg {
+      width: 64px;
+      height: 44px;
+    }
+
+    @include vp-1023 {
+      grid-row: 1 / 3;
+    }
+
+    @include vp-767 {
+      margin-right: 19px;
+      margin-bottom: 24px;
+
+      svg {
+        width: 93px;
+        height: 64px;
+      }
+    }
+  }
+
+  &__menu {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    margin-top: -8px;
+    margin-left: -40px;
+    margin-right: 40px;
+    padding-left: 0;
+
+    list-style: none;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    @include vp-1023 {
+      grid-row: 1 / 3;
+
+      margin-left: -16px;
+    }
+
+    @include vp-767 {
+      grid-column: 1 / 3;
+      grid-row: 3 / 4;
+
+      margin-right: 0;
+      margin-top: -16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__menu-item {
+    margin-left: 40px;
+    margin-top: 8px;
+
+    @include vp-1023 {
+      margin-left: 16px;
+    }
+
+    @include vp-767 {
+      margin-top: 16px;
+    }
+  }
+
+  &__menu-item.is-active {
+    color: $color-outrageous-orange;
+  }
+
+  &__social {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    margin-top: -8px;
+    margin-left: -16px;
+    margin-right: 40px;
+    padding-left: 0;
+
+    list-style: none;
+
+    @include vp-1023 {
+      grid-row: 1 / 3;
+
+      margin-left: -8px;
+      margin-right: 24px;
+    }
+
+    @include vp-767 {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      justify-self: end;
+
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__social-item {
+    margin-left: 16px;
+    margin-top: 8px;
+
+    @include vp-1023 {
+      margin-left: 8px;
+    }
+  }
+
+  &__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 24px;
+    height: 24px;
+  }
+
+  &__telefon {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+
+    display: flex;
+    align-items: center;
+
+    @include vp-767 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: end;
+
+      margin-bottom: 24px;
+    }
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &__design {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    span {
+      margin-right: 8px;
+    }
+
+    @include vp-767 {
+      grid-column: 1 / 3;
+      grid-row: 4 / 5;
+    }
+  }
+
+  a {
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+
+    &.is-active {
+      opacity: 1;
+
+      pointer-events: none;
+    }
+  }
 }
