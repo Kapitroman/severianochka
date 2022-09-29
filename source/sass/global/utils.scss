@@ -14,6 +14,12 @@
 
   main {
     flex-grow: 1;
+
+    margin-top: 80px;
+
+    @include vp-767 {
+      margin-top: 64px;
+    }
   }
 }
 

@@ -1,0 +1,73 @@
+.banner-2 {
+  position: relative;
+
+  display: block;
+
+  min-height: 200px;
+  padding-top: 12px;
+
+  background-color: $color-azure;
+
+  transition: opacity $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+
+  @include vp-1023 {
+    min-height: 160px;
+    padding-top: 20px;
+  }
+
+  @include vp-767 {
+    min-height: 80px;
+    padding-top: 6px;
+  }
+
+  img {
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+
+    width: 1080px;
+    height: 184px;
+    margin: 0 auto;
+
+    object-fit: cover;
+
+    transform: translateX(-40px);
+
+    @include vp-1023 {
+      width: 798px;
+      height: 136px;
+
+      transform: translateX(-20px);
+    }
+
+    @include vp-767 {
+      width: 429px;
+      height: 73px;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 22px;
+
+    background-color: $color-pacific-blue;
+
+    @include vp-1023 {
+      height: 20px;
+    }
+
+    @include vp-767 {
+      height: 10px;
+    }
+  }
+}

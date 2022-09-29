@@ -1,0 +1,14 @@
+mixin banner-slider()
+  .banner-slider.swiper
+    ul.banner-slider__wraper.swiper-wrapper
+      li.banner-slider__slide.swiper-slide
+        a.banner(href="#")
+          .container
+            .banner__wrap
+              .banner__image
+                +picture("content/banner-slider-main", "banner-main", "png", 303, 202, "изображение картины продуктов для баннера")
+              h2.titles.titles--banner Доставка бесплатно от&nbsp;1000&nbsp;₽
+      li.banner-slider__slide.swiper-slide
+        a.banner-2(href="#")
+          +picture("content/banner-slider-main", "banner-main-2", "png", 1080, 184, "графика для баннера")
+          .banner-2__line

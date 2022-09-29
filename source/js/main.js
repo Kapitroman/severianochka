@@ -3,6 +3,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 //import {initCustomSelect} from './modules/form/init-custom-select';
 //import {initFormValidate} from './modules/form/init-form-validate';
 import {showAuthorizedMenu} from './modules/show-authorized-menu';
+import {initBannerSlider} from './modules/init-banner-slider';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //initCustomSelect();
     //initFormValidate();
     showAuthorizedMenu();
+    initBannerSlider();
   });
 });
 

@@ -1,11 +1,11 @@
 .footer {
-  background-image: url("../img/content/pattern.png");
+  background-image: linear-gradient(rgba($color-default-white, 0.5), rgba($color-default-white, 0.5)), url("../img/content/pattern.png");
   background-repeat: repeat;
   background-size: 126px 126px;
   background-color: $color-off-yellow;
 
   @include retina {
-    background-image: url("../img/content/pattern@2x.png");
+    background-image: linear-gradient(rgba($color-default-white, 0.5), rgba($color-default-white, 0.5)), url("../img/content/pattern@2x.png");
   }
 
   @include vp-767 {

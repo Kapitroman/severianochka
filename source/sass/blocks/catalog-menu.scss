@@ -57,11 +57,24 @@
   }
 
   &__link.is-active {
+    opacity: 1;
+
+    pointer-events: none;
+
     color: $color-outrageous-orange;
   }
 
   &__link {
     display: inline-block;
+
+    transition: opacity $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
   }
 }
 

@@ -101,10 +101,16 @@ mixin header(headerMods, currentUrl)
               +icon("icon-headerlogotext", "100", "10")
 
         .main-nav__catalog
-          +btn({
-            text: "Каталог",
-            href: "catalog.html",
-            icon: {name: "icon-catalog", left: true}
+          if (currentUrl === "Каталог")
+            +btn({
+              text: "Каталог",
+              icon: {name: "icon-catalog", left: true}
+            }).btn--none-text-width-size.btn--middle-size.btn--green.disabled
+          else
+            +btn({
+              text: "Каталог",
+              href: "catalog.html",
+              icon: {name: "icon-catalog", left: true}
           }).btn--none-text-width-size.btn--middle-size.btn--green
           .catalog-menu
             .catalog-menu__list-wrap
@@ -114,7 +120,7 @@ mixin header(headerMods, currentUrl)
                   each link in catalogLinks
                     li.catalog-menu__item
                       if(currentUrl === link.text)
-                        span.catalog-menu__link.is-active=link.text
+                        a.catalog-menu__link.is-active=link.text
                       else
                         a.catalog-menu__link(href=link.href)=link.text
 
