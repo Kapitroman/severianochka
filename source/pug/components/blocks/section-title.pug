@@ -1,0 +1,8 @@
+mixin section-title(title, text)
+  .section-title
+    h2.titles.titles--h2=title
+    if text
+      +btn({
+        text: `${text}`,
+        icon: {name: "icon-arrow"}
+      }).btn--grey.btn--grey-transparent.btn--middle-size

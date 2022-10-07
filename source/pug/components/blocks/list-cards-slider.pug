@@ -1,0 +1,5 @@
+mixin list-cards-slider(cards)
+  .list-cards.list-cards--slider.swiper
+    ul.list-cards__wrapper.swiper-wrapper
+      each item in cards
+        +card-product(item).swiper-slide

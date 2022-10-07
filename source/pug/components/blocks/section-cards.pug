@@ -1,0 +1,8 @@
+mixin section-cards(title, text, cards, isSlider)
+  section.section-cards
+    .container
+      +section-title(title, text)
+      if isSlider
+        +list-cards-slider(cards)
+      else
+        +list-cards-grid(cards)

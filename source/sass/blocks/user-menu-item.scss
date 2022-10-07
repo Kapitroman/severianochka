@@ -25,6 +25,8 @@
   }
 
   &__counter {
+    display: none;
+
     position: absolute;
     top: -4px;
     right: 1px;
@@ -38,6 +40,10 @@
     color: $color-default-white;
 
     background-color: $color-outrageous-orange;
+  }
+
+  &__counter.is-showed {
+    display: block;
   }
 
   &__label {

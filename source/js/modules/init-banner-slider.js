@@ -11,6 +11,8 @@ const initSwiper = (slider) => {
     },
   });
 
+  /* swiper = new Swiper(slider, {})*/
+
 };
 
 const initBannerSlider = () => {

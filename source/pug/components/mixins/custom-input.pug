@@ -16,7 +16,7 @@ mixin custom-input(options = {})
     label
       if inputLabel
         span.custom-input__label!=inputLabel
-      if inputLabel
+      if inputLabelHidden
         span.visually-hidden!=inputLabelHidden
       input(type=inputType, id=inputId, name=inputName, value=inputValue, minlength=inputMinLength, maxlength=inputMaxLength, placeholder=inputPlaceholder, size=inputSize)
     if inputError

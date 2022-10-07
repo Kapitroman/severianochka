@@ -1,0 +1,226 @@
+.card-product {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 272px;
+  height: auto;
+  padding: 0 8px 8px 8px;
+  border-radius: 4px;
+  //margin-bottom: 40px;
+
+  background-color: $color-default-white;
+
+  box-shadow: 1px 2px 4px 0px rgba($color-default-black, 0.1);
+
+  &:hover {
+    box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
+
+    .card-product__button {
+      border-color: $color-outrageous-orange;
+      background-color: $color-outrageous-orange;
+      color: $color-default-white;
+    }
+  }
+
+  &__favourite {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+
+    border-color: $color-hint-of-red;
+
+    opacity: 0.5;
+
+    background-color: $color-hint-of-red;
+
+    color: $color-charcoal;
+
+    transition: opacity $trans-default, background-color $trans-default, border-color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        opacity: 0.5;
+        background-color: $color-tuft-bush;
+      }
+
+      &:active {
+        box-shadow: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__favourite.is-actived {
+    border-color: $color-transparent;
+
+    opacity: 1;
+
+    background-color: $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__cart-count {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+
+    display: flex;
+
+    padding: 4px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    background-color: rgba($color-default-white, 0.8);
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  &__link-wrap {
+    margin-bottom: 8px;
+  }
+
+  &__image {
+    position: relative;
+
+    margin: 0 -8px;
+    margin-bottom: 8px;
+
+    &::before {
+      content: "";
+      display: table;
+
+      padding-bottom: 58.82%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__discount-label {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+
+    margin: 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    color: $color-default-white;
+
+    background-color: $color-outrageous-orange;
+  }
+
+  &__text-wrap {
+    min-height: 133px;
+  }
+
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+
+    min-height: 45px;
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 700;
+  }
+
+  &__card-price {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+  }
+
+  &__card-price-text {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-silver;
+  }
+
+  &__usual-price {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin: 0;
+  }
+
+  &__usual-price-value {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $color-zambezi;
+  }
+
+  &__usual-price-text {
+    align-self: flex-end;
+
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-silver;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__rating {
+    display: flex;
+
+    svg {
+      color: $color-silver;
+    }
+
+    svg.is-rated {
+      color: $color-outrageous-orange;
+    }
+
+    svg + svg {
+      margin-left: 4px;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+  }
+
+  .product-count {
+    margin-top: auto;
+  }
+}
+
+.card-product--empty:not(.card-product__button) {
+  opacity: 0.5;
+}

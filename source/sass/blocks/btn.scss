@@ -12,10 +12,12 @@
   line-height: 32px;
   font-weight: 400;
 
+  hyphens: auto;
+
   background-color: $color-outrageous-orange;
   cursor: pointer;
 
-  transition: opacity $trans-default, box-shadow $trans-default;
+  transition: opacity $trans-default, box-shadow $trans-default, color $trans-default, background-color $trans-default, border-color $trans-default;
 
   svg {
     width: 32px;
@@ -35,6 +37,19 @@
     text-align: center;
 
     overflow-wrap: break-word;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
+      opacity: 0.7;
+    }
+
+    &:active {
+      box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
+      opacity: 0.3;
+    }
   }
 
   &--middle-size {
@@ -91,12 +106,47 @@
     border: 1px solid $color-mantis;
 
     background-color: $color-mantis;
-  }
 
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px rgba($color-mantis, 0.2);
+        opacity: 0.7;
+      }
+
+      &:active {
+        box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
+        opacity: 0.3;
+      }
+    }
+  }
+  /*
   &--orange {
     border: 1px solid $color-outrageous-orange;
 
     background-color: $color-outrageous-orange;
+  }
+  */
+
+  &--grey {
+    border: 1px solid $color-suva-grey;
+
+    color: $color-suva-grey;
+
+    background-color: $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px rgba($color-suva-grey, 0.2);
+        opacity: 0.7;
+      }
+
+      &:active {
+        box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
+        opacity: 0.3;
+      }
+    }
   }
 
   &--transparent {
@@ -107,6 +157,35 @@
     background-color: $color-transparent;
   }
 
+  &--grey-transparent {
+    border: 1px solid $color-transparent;
+
+    color: $color-suva-grey;
+
+    background-color: $color-transparent;
+  }
+
+  &--green-transparent {
+    border: 1px solid $color-mantis;
+
+    color: $color-mantis;
+
+    background-color: $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
+        opacity: 0.7;
+      }
+
+      &:active {
+        box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
+        opacity: 0.3;
+      }
+    }
+  }
+
   &:disabled,
   &.disabled {
     opacity: 0.5;
@@ -114,16 +193,7 @@
     pointer-events: none;
   }
 
-  @media (hover: hover), screen and (min-width: 0\0) {
-    &:hover,
-    &:focus {
-      box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
-      opacity: 0.7;
-    }
-
-    &:active {
-      box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
-      opacity: 0.3;
-    }
+  &.is-none {
+    display: none;
   }
 }

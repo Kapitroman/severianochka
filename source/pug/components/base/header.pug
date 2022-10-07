@@ -5,25 +5,29 @@ mixin header(headerMods, currentUrl)
         href: "catalog.html",
         text: "Каталог",
         icon: "icon-catalog",
-        hidden: true
+        hidden: true,
+        data: "catalog"
       },
       {
-        href: "favorite.html",
+        href: "favourite.html",
         text: "Избранное",
         icon: "icon-heart",
-        counter: 0
+        counter: 1,
+        data: "favourite"
       },
       {
         href: "orders.html",
         text: "Заказы",
         icon: "icon-orders",
-        counter: 0
+        counter: 0,
+        data: "order"
       },
       {
         href: "cart.html",
         text: "Корзина",
         icon: "icon-cart",
-        counter: 1
+        counter: 1,
+        data: "cart"
       },
     ]
 
@@ -133,7 +137,7 @@ mixin header(headerMods, currentUrl)
               inputName: "search-good",
               inputSize: 3
             }).custom-input--search
-            +btn({icon: {name: "icon-search"}, type: "submit"}).btn--none-text.btn--middle-size.btn--transparent
+            +btn({icon: {name: "icon-search"}, type: "submit"}).btn--none-text.btn--middle-size.btn--grey.btn--transparent
 
         ul.main-nav__user-menu
             each link in headerLinks
@@ -153,17 +157,21 @@ mixin header(headerMods, currentUrl)
               else
                 li.main-nav__item
                   if(activeState)
-                    a.user-menu-item.is-active(href=link.href)
+                    a.user-menu-item.is-active(href=link.href data-link=link.data data-count=link.counter)
                       .user-menu-item__icon-container
                         +icon(link.icon, 24, 24)
                         if link.counter
+                          span.user-menu-item__counter.is-showed=link.counter
+                        else
                           span.user-menu-item__counter=link.counter
                       p.user-menu-item__label=link.text
                   else
-                    a.user-menu-item(href=link.href)
+                    a.user-menu-item(href=link.href data-link=link.data data-count=link.counter)
                       .user-menu-item__icon-container
                         +icon(link.icon, 24, 24)
                         if link.counter
+                          span.user-menu-item__counter.is-showed=link.counter
+                        else
                           span.user-menu-item__counter=link.counter
                       p.user-menu-item__label=link.text
 
@@ -189,4 +197,4 @@ mixin header(headerMods, currentUrl)
                     text: "Войти",
                     href: "#",
                     icon: {name: "icon-login", left: false}
-                  }).btn--none-text-width-size.btn--middle-size.btn--orange.main-nav__login
+                  }).btn--none-text-width-size.btn--middle-size.main-nav__login

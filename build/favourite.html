@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>UI-kit</title>
+    <title>Северяночка</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -95,608 +95,225 @@
 </symbol></svg>
     </div>
     <div class="wrapper">
-      <style>
-        main {
-          margin-top: 100px;
-        }
-        
-        main > .container {
-          padding-top: 0;
-          padding-bottom: 0;
-        }
-        
-        .components-backwards {
-          color: #ffffff;
-          display: inline-block;
-        }
-        
-        .components-backwards span:first-child {
-          position: relative;
-          top: -3px;
-        
-          display: inline-block;
-          margin-right: 15px;
-        
-          font-size: 16px;
-          line-height: 24px;
-          vertical-align: top;
-        
-          transform: scale(2);
-        }
-        
-        .components-backwards span:last-child {
-          font-size: 16px;
-          line-height: 24px;
-        }
-        
-        .components-backwards + h1 {
-          margin-bottom: 0;
-        }
-        
-        .container > section {
-          padding: 70px 0 0 0;
-        }
-        
-        section > h2 {
-          margin: 0 0 20px 0;
-          padding: 20px 0;
-          position: relative;
-          color: #ffffff;
-        }
-        
-        section > h2::before {
-          content: "";
-          position: absolute;
-          height: 100%;
-          width: 100vw;
-          left: 50%;
-          top: 0;
-          transform: translateX(-50%);
-          background-color: #2c39f2;
-          z-index: -1;
-        }
-        
-        .header-ui {
-          background-color: #2c39f2;
-          padding: 20px 0;
-          position: fixed;
-          width: 100vw;
-          z-index: 99;
-          box-shadow: 0 0 3px 1px #000000;
-        }
-        
-        .header-ui + main {
-          margin-top: 67px;
-        }
-        
-        .header-ui__nav {
-          display: grid;
-          grid-template-columns: max-content 1fr;
-          gap: 20px 80px;
-        }
-        
-        .header-ui__inner-list {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px 30px;
-        }
-        
-        .header-ui__inner-link {
-          color: #ffffff;
-          transition: color 0.3s ease;
-        }
-        
-        .header-ui__inner-link:hover,
-        .header-ui__inner-link.is-active {
-          color: #ff1553;
-        }
-        
-        .header-ui__inner-link.is-inactive {
-          color: #ffffff;
-          pointer-events: none;
-        }
-        
-      </style>
-      <header class="header-ui">
-        <nav class="header-ui__nav container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
-          <ul class="header-ui__inner-list">
-            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
-            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
-            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#form-elements" data-navigation-link>Form elements</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
+      <header class="header">
         <div class="container">
-          <h1>UI-kit</h1>
-        </div>
-        <div class="container">
-          <section id="buttons">
-            <h2>Buttons</h2>
-            <div style="margin-bottom: 45px;">
-              <h3>Основная кнопка</h3>
-              <button class="btn btn--max-width-250" type="button">Я кнопка
-              </button>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Я кнопка"}).btn--max-width-250</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Основная ссылка</h3>
-              <a class="btn btn--max-width-250" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка">Я ссылка
-              </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Я ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--max-width-250</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Кнопка заблокирована</h3>
-              <button class="btn btn--max-width-250" type="button" disabled>Текст
-              </button>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Текст"})(disabled).btn--max-width-250</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Ссылка с иконкой слева</h3>
-              <a class="btn btn--max-width-250" href="#">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg><span>Текст</span>
-              </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--max-width-250</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Ссылка с иконкой справа</h3>
-              <a class="btn btn--max-width-250" href="#"><span>Текст</span>
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
+          <nav class="main-nav"><a class="header-logo" href="main.html" aria-label="Переход на главную">
+              <div class="header-logo__icon">
+                <svg width="40" height="32" aria-hidden="true">
+                  <use xlink:href="#icon-headerlogo"></use>
                 </svg>
-              </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Ссылка с иконкой без текста</h3>
-              <a class="btn btn--none-text" href="#">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
+              </div>
+              <div class="header-logo__text">
+                <svg width="100" height="10" aria-hidden="true">
+                  <use xlink:href="#icon-headerlogotext"></use>
                 </svg>
-              </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({href: "#", icon: {name: "icon-cart"}}).btn--none-text</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Ссылка с текстом, который скрывается с уменьшением размера экрана</h3>
-              <a class="btn btn--max-width-250 btn--none-text-width-size" href="#"><span>Текст</span>
+              </div></a>
+            <div class="main-nav__catalog">
+              <a class="btn btn--none-text-width-size btn--middle-size btn--green" href="catalog.html">
                 <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg>
+                  <use xlink:href="#icon-catalog"></use>
+                </svg><span>Каталог</span>
               </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250.btn--none-text-width-size</pre></code>
+              <div class="catalog-menu">
+                <div class="catalog-menu__list-wrap">
+                  <div class="catalog-menu__list-shadow">
+                    <div class="container">
+                      <ul class="catalog-menu__list">
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Молоко, сыр, яйцо</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Хлеб</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Фрукты и овощи</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Замороженные продукты</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Напитки</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Кондитерские изделия</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Чай, кофе</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Бакалея</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Здоровое питание</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Зоотовары</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Непродовольственные товары</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Детское питание</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Мясо, птица, колбаса</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Ссылка среднего размера</h3>
-              <a class="btn btn--middle-size btn--max-width-250" href="#">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg><span>Текст</span>
-              </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--max-width-250</pre></code>
-            </div>
-            <div style="margin-bottom: 45px;">
-              <h3>Ссылка зеленая</h3>
-              <a class="btn btn--middle-size btn--green btn--max-width-250" href="#">
-                <svg width="32" height="32" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg><span>Текст</span>
-              </a>
-              <p>Пример вызова</p><code>
-                <pre>+btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--green.btn--max-width-250</pre></code>
-            </div>
-          </section>
-        </div>
-        <div class="container">
-          <section id="modals">
-            <h2>Modals</h2>
-            <p>
-              <button class="btn btn--max-width-250" type="button" data-open-modal="feedback">modal-feedback
-              </button>
-            </p>
-            <p>
-              <button class="btn btn--max-width-250" type="button" data-open-modal="success">modal-success
-              </button>
-            </p>
-          </section>
-        </div>
-        <div class="container">
-          <section id="form-elements">
-            <h2>Form elements</h2>
-            <div data-validate>
-              <form method="post">
-                <div class="custom-input" data-validate-type="text" data-limitations="name">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
-                    <input type="text" name="user-name" minlength="2" size="20">
-                  </label>
-                  <div class="custom-input__error">Не корректное имя</div>
-                </div>
-                <p>Пример вызова</p><code>
-                  <pre>+custom-input({inputLabel: "Введите ваше имя", inputError: "Не корректное имя", inputName: "user-name", inputMinLength: "2"})(data-validate-type="text", data-limitations="letters")</pre></code>
-                <div class="custom-input" data-validate-type="phone">
-                  <label><span class="custom-input__label">Введите ваш телефон</span>
-                    <input type="tel" name="user-phone" size="20">
-                  </label>
-                  <div class="custom-input__error">Не корректный телефон</div>
-                </div>
-                <p>Пример вызова</p><code>
-                  <pre>+custom-input({inputLabel: "Введите ваш телефон", inputError: "Не корректный телефон", inputName: "user-phone"})(data-validate-type="phone")</pre></code>
-                <div class="custom-input" data-validate-type="email">
-                  <label><span class="custom-input__label">Введите ваш email</span>
-                    <input type="email" name="user-email" size="20">
-                  </label>
-                  <div class="custom-input__error">Не корректный email</div>
-                </div>
-                <p>Пример вызова</p><code>
-                  <pre>+custom-input({inputLabel: "Введите ваш email", inputError: "Не корректный email", inputName: "user-email"})(data-validate-type="email")</pre></code>
-                <div class="custom-textarea">
-                  <label><span class="custom-textarea__label">Расскажите о себе</span>
-                    <textarea name="user-info"></textarea>
+            <div class="search">
+              <form method="get" action="#">
+                <div class="custom-input custom-input--search">
+                  <label><span class="visually-hidden">поиск товара</span>
+                    <input type="search" name="search-good" placeholder="Найти товар" size="3">
                   </label>
                 </div>
-                <p>Пример вызова</p><code>
-                  <pre>+custom-textarea({inputLabel: "Расскажите о себе", inputName: "user-info"})</pre></code>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example"><span class="custom-select__error">Выберите тему обращения</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true" role="option">Тема 1</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
-                  </ul>
-                </div><code>
-                  <pre></pre>+custom-select({error: "Выберите тему обращения", optionsList: [{text: "Тема 1", value: "id-1"}, {text:
-                  "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5",
-                  value: "id-5"}, {text: "Тема 6", value: "id-6"}]})(data-select, data-validate-type="select", data-name="some-name",
-                  data-id="id-example").custom-select</code>
-                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox">
-                  <label>
-                    <input type="checkbox" name="user-agreement" checked><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Подтвердите своё согласие</span>
-                  </label>
-                  <div class="custom-toggle__error">Согласие является обязательным</div>
-                </div>
-                <p>Пример вызова</p><code>
-                  <pre>+custom-toggle({inputLabel: "Подтвердите своё согласие", inputError: "Согласие является обязательным", inputName: "user-agreement", inputChecked: true})(data-validate-type="checkbox").custom-toggle--checkbox</pre></code>
-                <button class="btn" type="reset">Сбросить форму
-                </button>
-                <button class="btn" type="submit">Отправить форму
+                <button class="btn btn--none-text btn--middle-size btn--grey btn--transparent" type="submit">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
                 </button>
               </form>
             </div>
-          </section>
+            <ul class="main-nav__user-menu">
+              <li class="main-nav__item mobile-width-show"><a class="user-menu-item" href="catalog.html">
+                  <div class="user-menu-item__icon-container">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-catalog"></use>
+                    </svg>
+                  </div>
+                  <p class="user-menu-item__label">Каталог</p></a>
+              </li>
+              <li class="main-nav__item"><a class="user-menu-item is-active" href="favourite.html" data-link="favourite" data-count="1">
+                  <div class="user-menu-item__icon-container">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-heart"></use>
+                    </svg><span class="user-menu-item__counter is-showed">1</span>
+                  </div>
+                  <p class="user-menu-item__label">Избранное</p></a>
+              </li>
+              <li class="main-nav__item"><a class="user-menu-item" href="orders.html" data-link="order" data-count="0">
+                  <div class="user-menu-item__icon-container">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-orders"></use>
+                    </svg><span class="user-menu-item__counter">0</span>
+                  </div>
+                  <p class="user-menu-item__label">Заказы</p></a>
+              </li>
+              <li class="main-nav__item"><a class="user-menu-item" href="cart.html" data-link="cart" data-count="1">
+                  <div class="user-menu-item__icon-container">
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-cart"></use>
+                    </svg><span class="user-menu-item__counter is-showed">1</span>
+                  </div>
+                  <p class="user-menu-item__label">Корзина</p></a>
+              </li>
+              <li class="main-nav__item">
+                <div class="main-nav__button-wrap">
+                  <a class="btn btn--none-text-width-size btn--middle-size main-nav__login" href="#"><span>Войти</span>
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-login"></use>
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="intro">
+          <div class="container">
+            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
+            <p style="margin-top: 40px;">Пример использования +img()</p>
+            <p style="margin-bottom: 40px;"><img src="img/content/placeholder.png" srcset="img/content/placeholder@2x.png 2x" width="120" height="120" alt="Пример">
+            </p>
+          </div>
+          <div class="container"><a class="user-menu-item user-menu-item--not-empty is-active" href="#">
+              <div class="user-menu-item__icon-container">
+                <svg width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-cart"></use>
+                </svg><span class="user-menu-item__counter">1</span>
+              </div>
+              <div class="user-menu-item__label">Избранное</div></a><a class="user-menu-item" href="#">
+              <div class="user-menu-item__icon-container">
+                <svg width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-cart"></use>
+                </svg><span class="user-menu-item__counter">1</span>
+              </div>
+              <div class="user-menu-item__label">Избранное</div></a><a class="user-menu-item user-menu-item--not-empty" href="#">
+              <div class="user-menu-item__icon-container">
+                <svg width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-cart"></use>
+                </svg><span class="user-menu-item__counter">1</span>
+              </div>
+              <div class="user-menu-item__label">Избранное</div></a>
+            <div>
+              <div class="header-logo">
+                <div class="header-logo__icon">
+                  <svg width="40" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-headerlogo"></use>
+                  </svg>
+                </div>
+                <div class="header-logo__text">
+                  <svg width="100" height="10" aria-hidden="true">
+                    <use xlink:href="#icon-headerlogotext"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="search">
+                <form method="get" action="#">
+                  <div class="custom-input custom-input--search">
+                    <label><span class="visually-hidden">поиск товара</span>
+                      <input type="search" name="search-good" placeholder="Найти товар" size="20">
+                    </label>
+                  </div>
+                  <button class="btn btn--none-text btn--middle-size btn--transparent" type="submit">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-search"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
-      <script>const MoveTo = (() => {
-  /**
-  * Defaults
-  * @type {object}
-  */
-  const defaults = {
-    tolerance: 0,
-    duration: 800,
-    easing: 'easeOutQuart',
-    container: window,
-    callback() {},
-  };
-
-  /**
-  * easeOutQuart Easing Function
-  * @param  {number} t - current time
-  * @param  {number} b - start value
-  * @param  {number} c - change in value
-  * @param  {number} d - duration
-  * @return {number} - calculated value
-  */
-  function easeOutQuart(t, b, c, d) {
-    t /= d;
-    t--;
-    return -c * (t * t * t * t - 1) + b;
-  }
-
-  /**
-  * Merge two object
-  *
-  * @param  {object} obj1
-  * @param  {object} obj2
-  * @return {object} merged object
-  */
-  function mergeObject(obj1, obj2) {
-    const obj3 = {};
-    Object.keys(obj1).forEach((propertyName) => {
-      obj3[propertyName] = obj1[propertyName];
-    });
-
-    Object.keys(obj2).forEach((propertyName) => {
-      obj3[propertyName] = obj2[propertyName];
-    });
-    return obj3;
-  }
-
-  /**
-  * Converts camel case to kebab case
-  * @param  {string} val the value to be converted
-  * @return {string} the converted value
-  */
-  function kebabCase(val) {
-    return val.replace(/([A-Z])/g, function ($1) {
-      return '-' + $1.toLowerCase();
-    });
-  }
-
-  /**
-  * Count a number of item scrolled top
-  * @param  {Window|HTMLElement} container
-  * @return {number}
-  */
-  function countScrollTop(container) {
-    if (container instanceof HTMLElement) {
-      return container.scrollTop;
-    }
-    return container.pageYOffset;
-  }
-
-  /**
-  * MoveTo Constructor
-  * @param {object} options Options
-  * @param {object} easeFunctions Custom ease functions
-  */
-  // eslint-disable-next-line no-shadow
-  function MoveTo(options = {}, easeFunctions = {}) {
-    this.options = mergeObject(defaults, options);
-    this.easeFunctions = mergeObject({easeOutQuart}, easeFunctions);
-  }
-
-  /**
-  * Register a dom element as trigger
-  * @param  {HTMLElement} dom Dom trigger element
-  * @param  {function} callback Callback function
-  * @return {function|void} unregister function
-  */
-  MoveTo.prototype.registerTrigger = function (dom, callback) {
-    if (!dom) {
-      return;
-    }
-
-    const href = dom.getAttribute('href') || dom.getAttribute('data-target');
-    // The element to be scrolled
-    const target = (href && href !== '#')
-      ? document.getElementById(href.substring(1))
-      : document.body;
-    const options = mergeObject(this.options, _getOptionsFromTriggerDom(dom, this.options));
-
-    if (typeof callback === 'function') {
-      options.callback = callback;
-    }
-
-    const listener = (e) => {
-      e.preventDefault();
-      this.move(target, options);
-    };
-
-    dom.addEventListener('click', listener, false);
-
-    // eslint-disable-next-line consistent-return
-    return () => dom.removeEventListener('click', listener, false);
-  };
-
-  /**
-  * Move
-  * Scrolls to given element by using easeOutQuart function
-  * @param  {HTMLElement|number} target Target element to be scrolled or target position
-  * @param  {object} options Custom options
-  */
-  MoveTo.prototype.move = function (target, options = {}) {
-    if (target !== 0 && !target) {
-      return;
-    }
-
-    options = mergeObject(this.options, options);
-
-    let distance = typeof target === 'number' ? target : target.getBoundingClientRect().top;
-    const from = countScrollTop(options.container);
-    let startTime = null;
-    let lastYOffset;
-    distance -= options.tolerance;
-
-    // rAF loop
-    /* eslint-disable-next-line */
-    const loop = (currentTime) => {
-      const currentYOffset = countScrollTop(this.options.container);
-
-      if (!startTime) {
-        // To starts time from 1, we subtracted 1 from current time
-        // If time starts from 1 The first loop will not do anything,
-        // because easing value will be zero
-        startTime = currentTime - 1;
-      }
-
-      const timeElapsed = currentTime - startTime;
-
-      if (lastYOffset) {
-        if (
-          (distance > 0 && lastYOffset > currentYOffset) ||
-          (distance < 0 && lastYOffset < currentYOffset)
-        ) {
-          return options.callback(target);
-        }
-      }
-      lastYOffset = currentYOffset;
-
-      const val = this.easeFunctions[options.easing](timeElapsed, from, distance, options.duration);
-
-      options.container.scroll(0, val);
-
-      if (timeElapsed < options.duration) {
-        window.requestAnimationFrame(loop);
-      } else {
-        options.container.scroll(0, distance + from);
-        options.callback(target);
-      }
-    };
-
-    window.requestAnimationFrame(loop);
-  };
-
-  /**
-  * Adds custom ease function
-  * @param {string}   name Ease function name
-  * @param {function} fn   Ease function
-  */
-  MoveTo.prototype.addEaseFunction = function (name, fn) {
-    this.easeFunctions[name] = fn;
-  };
-
-  /**
-  * Returns options which created from trigger dom element
-  * @param  {HTMLElement} dom Trigger dom element
-  * @param  {object} options The instance's options
-  * @return {object} The options which created from trigger dom element
-  */
-  function _getOptionsFromTriggerDom(dom, options) {
-    const domOptions = {};
-
-    Object.keys(options).forEach((key) => {
-      const value = dom.getAttribute(`data-mt-${kebabCase(key)}`);
-      if (value) {
-        domOptions[key] = isNaN(value) ? value : parseInt(value, 10);
-      }
-    });
-    return domOptions;
-  }
-
-  return MoveTo;
-})();
-window.MoveTo = MoveTo;
-
-class NavigationChanger {
-  constructor() {
-    this._scrollDuration = 1000;
-    this._currentIndex = 0;
-    this._newCurrentIndex = null;
-    this._blockShift = 50;
-    this._linkElements = document.querySelectorAll('[data-navigation-link]');
-
-    this._moveTo = new window.MoveTo({
-      duration: this._scrollDuration,
-      easing: 'easeOutQuart',
-    });
-
-    this._documentScrollHandler = this._documentScrollHandler.bind(this);
-  }
-
-  init() {
-    if (!this._linkElements.length) {
-      return;
-    }
-    this._initMoveTo();
-    this._changeLinksActiveState();
-    document.addEventListener('scroll', this._documentScrollHandler);
-  }
-
-  _documentScrollHandler() {
-    this._changeLinksActiveState();
-  }
-
-  _changeLinksActiveState() {
-    this._linkElements.forEach((link, index) => {
-      const currentBlockElement = document.querySelector(`${link.getAttribute('href')}`);
-      if (!currentBlockElement) {
-        // eslint-disable-next-line no-console
-        console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
-        return;
-      }
-      if (currentBlockElement.getBoundingClientRect().bottom > this._blockShift && currentBlockElement.getBoundingClientRect().top <= this._blockShift) {
-        link.classList.add('is-active');
-      } else {
-        link.classList.remove('is-active');
-      }
-
-      if (document.body.getBoundingClientRect().bottom - window.innerHeight < this._blockShift && currentBlockElement.getBoundingClientRect().top > this._blockShift) {
-        this._linkElements[index - 1].classList.remove('is-active');
-        link.classList.add('is-active');
-      }
-    });
-  }
-
-  _removeLinkAnimation() {
-    this._linkElements.forEach((link, index) => {
-      if (index !== this._currentIndex && index !== this._newCurrentIndex) {
-        link.classList.add('is-inactive');
-      }
-    });
-  }
-
-  _addLinkAnimation() {
-    this._linkElements.forEach((link) => link.classList.remove('is-inactive'));
-    this._currentIndex = this._newCurrentIndex;
-  }
-
-  _initMoveTo() {
-    this._linkElements.forEach((link, index) => {
-      link.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        const target = document.querySelector(`${link.getAttribute('href')}`);
-        if (!target) {
-          // eslint-disable-next-line no-console
-          console.error('Блока на который ссылается ссылка не существует! Проверьте соответствие href ссылок с id блоков');
-          return;
-        }
-        this._newCurrentIndex = index;
-        this._moveTo.move(target);
-        this._removeLinkAnimation();
-        setTimeout(() => {
-          this._addLinkAnimation();
-        }, this._scrollDuration);
-      });
-    });
-  }
-}
-
-const navigationChanger = new NavigationChanger();
-
-navigationChanger.init();
-
-      </script>
-    </div>
-    <div class="modal modal--preload modal--feedback" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15" aria-hidden="true">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__wrap"><a class="footer__logo" href="main.html" aria-label="Переход на главную">
+              <svg width="64" height="44" aria-hidden="true">
+                <use xlink:href="#icon-footerlogo"></use>
+              </svg></a>
+            <ul class="footer__menu">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">О компании</a>
+              </li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Вакансии</a>
+              </li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Статьи</a>
+              </li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Политика обработки персональных данных</a>
+              </li>
+            </ul>
+            <ul class="footer__social">
+              <li class="footer__social-item"><a class="footer__social-link" href="#"><span class="visually-hidden">Инстаграмм</span>
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                  </svg></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="#"><span class="visually-hidden">В контакте</span>
+                  <svg width="20" height="12" aria-hidden="true">
+                    <use xlink:href="#icon-vkontakte"></use>
+                  </svg></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="#"><span class="visually-hidden">Фейсбук</span>
+                  <svg width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg></a></li>
+              <li class="footer__social-item"><a class="footer__social-link" href="#"><span class="visually-hidden">Одноклассники</span>
+                  <svg width="12" height="20" aria-hidden="true">
+                    <use xlink:href="#icon-odnoklassniki"></use>
+                  </svg></a></li>
+            </ul><a class="footer__telefon" href="tel:+78007773333">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-phone"></use>
+              </svg><span>8 800 777 33 33</span></a><a class="footer__design" href="#"><span>Дизайн</span>
+              <svg width="100" height="9" aria-hidden="true">
+                <use xlink:href="#icon-zasovskiy"></use>
+              </svg></a>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br>отключена анимация-скейл</p>
-          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15" aria-hidden="true">
-              <use xlink:href="#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
+      </footer>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

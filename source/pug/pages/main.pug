@@ -10,11 +10,310 @@ block variables
   - const currentUrl = "Главная" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
   - const userAuthorized = true
 
+  -
+    const cardProducts = [
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: false,
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: false,
+        order: false,
+        count: 4,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "card-product--empty",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: true,
+        favourite: false
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: true
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: false,
+        order: 4,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: false,
+        empty: false,
+        favourite: false
+      },
+    ]
+
+  -
+    const cardProducts2 = [
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: false,
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: false,
+        order: false,
+        count: 4,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "card-product--empty",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: true,
+        favourite: false
+      },
+    ]
+
+  -
+    const cardProducts3 = [
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+      {
+        additionClass: "",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: false,
+        order: false,
+        count: false,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...",
+        rating: [true, true, true, false, false],
+        empty: false,
+        favourite: false
+      },
+    ]
+
+  -
+    const cardProductsActions = [
+      {
+        picture: ["content/products", "product-01", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Г/Ц Блинчики с мясом вес, Россия",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        count: 4,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное рпрваып рпапыав раорпраорпы  рррыпаопро рппыапавпав ",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы ",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыропорпавы роапропараопрап оравпроавпрвапмрра",
+      },
+      {
+        picture: ["content/products", "product-01", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Г/Ц Блинчики с мясом вес, Россия",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное рпрваып рпапыав раорпраорпы  рррыпаопро рппыапавпав ",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы ",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыропорпавы роапропараопрап оравпроавпрвапмрра",
+      },
+    ]
+
+  -
+    const cardProductsNew = [
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+       {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+    ]
+
+  -
+    const cardProductsBoughtBefore = [
+      {
+        picture: ["content/products", "product-06", "png", 272, 160, "изображение продукта"],
+        price: "77,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+      {
+        additionClass: "card-product--empty",
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+        empty: true,
+      },
+    ]
+
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
     h1.visually-hidden Горячая информация о продуктах
     +banner-slider()
+
+    //-+section-cards("Акции", "Все акции", cardProducts, true)
+    //-+section-cards("Акции", false, cardProducts, false)
+    //-+section-cards("Акции", "Все акции", cardProducts, true)
+    //-+section-cards("Акции", "Все акции", cardProducts2, true)
+    //-+section-cards("Акции", "Все акции", cardProducts3, true)
+
+    +section-cards("Акции", "Все акции", cardProductsActions, true)
+    +section-cards("Новинки", "Все новинки", cardProductsNew, true)
+    +section-cards("Покупали раньше", "Все покупки", cardProductsBoughtBefore, true)
 
 block modals

@@ -4,6 +4,12 @@ import {iosVhFix} from './utils/ios-vh-fix';
 //import {initFormValidate} from './modules/form/init-form-validate';
 import {showAuthorizedMenu} from './modules/show-authorized-menu';
 import {initBannerSlider} from './modules/init-banner-slider';
+import {initListCardsSlider} from './modules/init-list-cards-slider';
+import {hideButtonShowAll} from './modules/hide-button-show-all';
+import {initProductCount} from './modules/init-product-count';
+import {initFavouriteClick} from './modules/init-favourite-click';
+import {removeFocus} from './modules/remove-focus';
+import {initCartButtonClick} from './modules/init-cart-button-click';
 
 // ---------------------------------
 
@@ -25,6 +31,12 @@ window.addEventListener('DOMContentLoaded', () => {
     //initFormValidate();
     showAuthorizedMenu();
     initBannerSlider();
+    initListCardsSlider();
+    hideButtonShowAll();
+    initProductCount();
+    initFavouriteClick();
+    removeFocus();
+    initCartButtonClick();
   });
 });
 

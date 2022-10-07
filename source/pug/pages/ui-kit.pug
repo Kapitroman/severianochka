@@ -6,12 +6,12 @@ block variables
 block main
   style.
     main {
-      //margin-top: 100px;
+      margin-top: 100px;
     }
 
     main > .container {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     .components-backwards {
@@ -75,7 +75,7 @@ block main
     }
 
     .header-ui + main {
-      margin-top: 100px;
+      margin-top: 67px;
     }
 
     .header-ui__nav {
@@ -115,9 +115,9 @@ block main
         span вернуться на разводящую
       ul.header-ui__inner-list
         li.header-ui__inner-item
-          a.header-ui__inner-link(href="#modals", data-navigation-link) Modals
-        li.header-ui__inner-item
           a.header-ui__inner-link(href="#buttons", data-navigation-link) Buttons
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#modals", data-navigation-link) Modals
         li.header-ui__inner-item
           a.header-ui__inner-link(href="#form-elements", data-navigation-link) Form elements
 
@@ -125,6 +125,98 @@ block main
     .container
       h1 UI-kit
       //- все модалки проекта добавляем сюда, для удобства тестирования
+
+    .container
+      section(id="buttons")
+        h2 Buttons
+
+        div(style = "margin-bottom: 45px;")
+          h3 Основная кнопка
+          +btn({text: "Я кнопка"}).btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Я кнопка"}).btn--max-width-250
+
+        div(style = "margin-bottom: 45px;")
+          h3 Основная ссылка
+          +btn({text: "Я ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Я ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--max-width-250
+
+        div(style = "margin-bottom: 45px;")
+          h3 Кнопка заблокирована
+          +btn({text: "Текст"})(disabled).btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Текст"})(disabled).btn--max-width-250
+
+        div(style = "margin-bottom: 45px;")
+          h3 Ссылка с иконкой слева
+          +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: true}
+          }).btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--max-width-250
+
+        div(style = "margin-bottom: 45px;")
+          h3 Ссылка с иконкой справа
+          +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: false}
+          }).btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250
+
+        div(style = "margin-bottom: 45px;")
+          h3 Ссылка с иконкой без текста
+          +btn({
+            href: "#",
+            icon: {name: "icon-cart"}
+          }).btn--none-text
+          p Пример вызова
+          code
+            pre +btn({href: "#", icon: {name: "icon-cart"}}).btn--none-text
+
+        div(style = "margin-bottom: 45px;")
+          h3 Ссылка с текстом, который скрывается с уменьшением размера экрана
+          +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: false}
+          }).btn--max-width-250.btn--none-text-width-size
+          p Пример вызова
+          code
+            pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250.btn--none-text-width-size
+
+        div(style = "margin-bottom: 45px;")
+          h3 Ссылка среднего размера
+          +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: true}
+          }).btn--middle-size.btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--max-width-250
+
+        div(style = "margin-bottom: 45px;")
+          h3 Ссылка зеленая
+          +btn({
+            text: "Текст",
+            href: "#",
+            icon: {name: "icon-cart", left: true}
+          }).btn--middle-size.btn--green.btn--max-width-250
+          p Пример вызова
+          code
+            pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--green.btn--max-width-250
+
+    .container
       section(id="modals")
         h2 Modals
         p
@@ -132,58 +224,7 @@ block main
         p
           +btn({text: "modal-success"})(data-open-modal="success").btn--max-width-250
 
-      section(id="buttons")
-        h2 Buttons
-        +btn({text: "Текст", href: "#"}).btn--max-width-250
-        p Пример вызова
-        code
-          pre +btn({text: "Текст", href: "#"}).btn--max-width-250
-
-        +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red.btn--max-width-250
-        p Пример вызова
-        code
-          pre +btn({text: "Я красная ссылка", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red.btn--max-width-250
-
-        +btn({text: "Текст"})(disabled).btn--max-width-250
-        p Пример вызова
-        code
-          pre +btn({text: "Текст"})(disabled).btn--max-width-250
-
-        +btn({
-                text: "Текст",
-                href: "#",
-                icon: {name: "icon-cart", left: true}
-          }).btn--middle-size.btn--green.btn--max-width-250
-        p Пример вызова
-        code
-          pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--green.btn--max-width-250
-
-        +btn({
-            text: "Текст",
-            href: "#",
-            icon: {name: "icon-cart", left: false}
-          }).btn--max-width-250
-        p Пример вызова
-        code
-          pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250
-
-        +btn({
-            href: "#",
-            icon: {name: "icon-cart"}
-          }).btn--none-text
-        p Пример вызова
-        code
-          pre +btn({href: "#", icon: {name: "icon-cart"}}).btn--none-text
-
-        +btn({
-            text: "Текст",
-            href: "#",
-            icon: {name: "icon-cart", left: false}
-          }).btn--max-width-250.btn--none-text-width-size
-        p Пример вызова
-        code
-          pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: false}}).btn--max-width-250.btn--none-text-width-size
-
+    .container
       section(id="form-elements")
         h2 Form elements
         div(data-validate)
