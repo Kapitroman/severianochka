@@ -1,0 +1,36 @@
+.list-articles {
+  &__wrapper {
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+  }
+}
+
+.list-articles--grid {
+  .list-articles__wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 40px;
+
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    @include vp-1023 {
+      gap: 32px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .article {
+      width: 100%;
+    }
+  }
+}

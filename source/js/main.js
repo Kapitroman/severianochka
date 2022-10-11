@@ -5,6 +5,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {showAuthorizedMenu} from './modules/show-authorized-menu';
 import {initBannerSlider} from './modules/init-banner-slider';
 import {initListCardsSlider} from './modules/init-list-cards-slider';
+import {initListArticlesSlider} from './modules/init-list-articles-slider';
 import {hideButtonShowAll} from './modules/hide-button-show-all';
 import {initProductCount} from './modules/init-product-count';
 import {initFavouriteClick} from './modules/init-favourite-click';
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showAuthorizedMenu();
     initBannerSlider();
     initListCardsSlider();
+    initListArticlesSlider();
     hideButtonShowAll();
     initProductCount();
     initFavouriteClick();

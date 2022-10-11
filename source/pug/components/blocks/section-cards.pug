@@ -1,5 +1,5 @@
 mixin section-cards(title, text, cards, isSlider)
-  section.section-cards
+  section.section&attributes(attributes)
     .container
       +section-title(title, text)
       if isSlider

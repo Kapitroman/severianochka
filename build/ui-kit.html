@@ -166,7 +166,7 @@
         }
         
         .header-ui + main {
-          margin-top: 67px;
+          margin-top: 100px;
         }
         
         .header-ui__nav {
@@ -204,6 +204,7 @@
         <nav class="header-ui__nav container"><a class="components-backwards" href="index.html"><span>&larr;</span><span>вернуться на разводящую</span></a>
           <ul class="header-ui__inner-list">
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#buttons" data-navigation-link>Buttons</a></li>
+            <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#card-product" data-navigation-link>Card product</a></li>
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#modals" data-navigation-link>Modals</a></li>
             <li class="header-ui__inner-item"><a class="header-ui__inner-link" href="#form-elements" data-navigation-link>Form elements</a></li>
           </ul>
@@ -268,7 +269,7 @@
                 <pre>+btn({href: "#", icon: {name: "icon-cart"}}).btn--none-text</pre></code>
             </div>
             <div style="margin-bottom: 45px;">
-              <h3>Ссылка с текстом, который скрывается с уменьшением размера экрана</h3>
+              <h3>Ссылка с текстом, текст скрывается с уменьшением размера экрана</h3>
               <a class="btn btn--max-width-250 btn--none-text-width-size" href="#"><span>Текст</span>
                 <svg width="32" height="32" aria-hidden="true">
                   <use xlink:href="#icon-cart"></use>
@@ -296,6 +297,348 @@
               </a>
               <p>Пример вызова</p><code>
                 <pre>+btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--green.btn--max-width-250</pre></code>
+            </div>
+          </section>
+        </div>
+        <div class="container">
+          <section id="card-product">
+            <h2>Карточка товара</h2>
+            <div style="margin-bottom: 45px;">
+              <h3>Карточка товара</h3>
+              <li class="card-product">
+                <button class="btn btn--none-text btn--middle-size card-product__favourite" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                </button><a class="card-product__link-wrap" href="#">
+                  <div class="card-product__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/products/product-02.webp, img/content/products/product-02@2x.webp 2x"><img src="img/content/products/product-02.png" srcset="img/content/products/product-02@2x.png 2x" width="272" height="160" alt="изображение продукта">
+                    </picture>
+                  </div>
+                  <div class="card-product__text-wrap">
+                    <div class="card-product__prices">
+                      <p class="card-product__card-price"><span>44,50 ₽</span></p>
+                    </div>
+                    <p class="card-product__title">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга</p>
+                    <div class="card-product__rating">
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div></a>
+                <button class="btn btn--middle-size btn--green-transparent card-product__button" type="button">В корзину
+                </button>
+                <div class="product-count">
+                  <form action="#" method="GET">
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="decrease">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <div class="custom-input">
+                      <label><span class="visually-hidden">количество выбранного товара</span>
+                        <input type="text" value="1" size="20">
+                      </label>
+                    </div>
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="increase">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <p>Пример вызова</p><code>
+                <pre>+card-product(cards[0])</pre></code>
+            </div>
+            <div style="margin-bottom: 45px;">
+              <h3>Карточка товара c акциями</h3>
+              <li class="card-product">
+                <button class="btn btn--none-text btn--middle-size card-product__favourite" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                </button><a class="card-product__link-wrap" href="#">
+                  <div class="card-product__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/products/product-02.webp, img/content/products/product-02@2x.webp 2x"><img src="img/content/products/product-02.png" srcset="img/content/products/product-02@2x.png 2x" width="272" height="160" alt="изображение продукта">
+                    </picture>
+                    <p class="card-product__discount-label">-50%</p>
+                  </div>
+                  <div class="card-product__text-wrap">
+                    <div class="card-product__prices">
+                      <p class="card-product__card-price"><span class="card-product__card-price-value">44,50 ₽</span><span class="card-product__card-price-text">С картой</span></p>
+                      <p class="card-product__usual-price"><span class="card-product__usual-price-value">50,50 ₽</span><span class="card-product__usual-price-text">Обычная</span></p>
+                    </div>
+                    <p class="card-product__title">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга</p>
+                    <div class="card-product__rating">
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div></a>
+                <button class="btn btn--middle-size btn--green-transparent card-product__button" type="button">В корзину
+                </button>
+                <div class="product-count">
+                  <form action="#" method="GET">
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="decrease">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <div class="custom-input">
+                      <label><span class="visually-hidden">количество выбранного товара</span>
+                        <input type="text" value="1" size="20">
+                      </label>
+                    </div>
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="increase">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <p>Пример вызова</p><code>
+                <pre>+card-product(cards[1])</pre></code>
+            </div>
+            <div style="margin-bottom: 45px;">
+              <h3>Карточка товара, добавленная в корзину</h3>
+              <li class="card-product">
+                <button class="btn btn--none-text btn--middle-size card-product__favourite" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                </button><a class="card-product__link-wrap" href="#">
+                  <div class="card-product__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/products/product-02.webp, img/content/products/product-02@2x.webp 2x"><img src="img/content/products/product-02.png" srcset="img/content/products/product-02@2x.png 2x" width="272" height="160" alt="изображение продукта">
+                    </picture>
+                  </div>
+                  <div class="card-product__text-wrap">
+                    <div class="card-product__prices">
+                      <p class="card-product__card-price"><span>44,50 ₽</span></p>
+                    </div>
+                    <p class="card-product__title">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга</p>
+                    <div class="card-product__rating">
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div></a>
+                <button class="btn btn--middle-size btn--green-transparent card-product__button is-none" type="button">В корзину
+                </button>
+                <div class="product-count is-showed">
+                  <form action="#" method="GET">
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="decrease">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <div class="custom-input">
+                      <label><span class="visually-hidden">количество выбранного товара</span>
+                        <input type="text" value="4" size="20">
+                      </label>
+                    </div>
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="increase">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <p>Пример вызова</p><code>
+                <pre>+card-product(cards[2])</pre></code>
+            </div>
+            <div style="margin-bottom: 45px;">
+              <h3>Карточка товара которого нет в наличии</h3>
+              <li class="card-product card-product--empty">
+                <button class="btn btn--none-text btn--middle-size card-product__favourite" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                </button><a class="card-product__link-wrap" href="#">
+                  <div class="card-product__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/products/product-02.webp, img/content/products/product-02@2x.webp 2x"><img src="img/content/products/product-02.png" srcset="img/content/products/product-02@2x.png 2x" width="272" height="160" alt="изображение продукта">
+                    </picture>
+                  </div>
+                  <div class="card-product__text-wrap">
+                    <div class="card-product__prices">
+                      <p class="card-product__card-price"><span>44,50 ₽</span></p>
+                    </div>
+                    <p class="card-product__title">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга</p>
+                    <div class="card-product__rating">
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div></a>
+                <button class="btn btn--middle-size disabled btn--green card-product__button" type="button">Нет в наличии
+                </button>
+              </li>
+              <p>Пример вызова</p><code>
+                <pre>+card-product(cards[3])</pre></code>
+            </div>
+            <div style="margin-bottom: 45px;">
+              <h3>Карточка товара, добавленная в избранное</h3>
+              <li class="card-product">
+                <button class="btn btn--none-text btn--middle-size card-product__favourite is-actived" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                </button><a class="card-product__link-wrap" href="#">
+                  <div class="card-product__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/products/product-02.webp, img/content/products/product-02@2x.webp 2x"><img src="img/content/products/product-02.png" srcset="img/content/products/product-02@2x.png 2x" width="272" height="160" alt="изображение продукта">
+                    </picture>
+                  </div>
+                  <div class="card-product__text-wrap">
+                    <div class="card-product__prices">
+                      <p class="card-product__card-price"><span>44,50 ₽</span></p>
+                    </div>
+                    <p class="card-product__title">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга</p>
+                    <div class="card-product__rating">
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg class="is-rated" width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                      <svg width="16" height="16" aria-hidden="true">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div></a>
+                <button class="btn btn--middle-size btn--green-transparent card-product__button" type="button">В корзину
+                </button>
+                <div class="product-count">
+                  <form action="#" method="GET">
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="decrease">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <div class="custom-input">
+                      <label><span class="visually-hidden">количество выбранного товара</span>
+                        <input type="text" value="1" size="20">
+                      </label>
+                    </div>
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="increase">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <p>Пример вызова</p><code>
+                <pre>+card-product(cards[4])</pre></code>
+            </div>
+            <div style="margin-bottom: 45px;">
+              <h3>Карточка товара на странице заказа товара</h3>
+              <li class="card-product">
+                <button class="btn btn--none-text btn--middle-size card-product__favourite" type="button">
+                  <svg width="32" height="32" aria-hidden="true">
+                    <use xlink:href="#icon-heart"></use>
+                  </svg>
+                </button>
+                <div class="card-product__cart-count">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg><span>4</span>
+                </div><a class="card-product__link-wrap" href="#">
+                  <div class="card-product__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/products/product-02.webp, img/content/products/product-02@2x.webp 2x"><img src="img/content/products/product-02.png" srcset="img/content/products/product-02@2x.png 2x" width="272" height="160" alt="изображение продукта">
+                    </picture>
+                  </div>
+                  <div class="card-product__text-wrap">
+                    <div class="card-product__prices">
+                      <p class="card-product__card-price"><span>44,50 ₽</span></p>
+                    </div>
+                    <p class="card-product__title">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга</p>
+                  </div></a>
+                <button class="btn btn--middle-size btn--green-transparent card-product__button" type="button">В корзину
+                </button>
+                <div class="product-count">
+                  <form action="#" method="GET">
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="decrease">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <div class="custom-input">
+                      <label><span class="visually-hidden">количество выбранного товара</span>
+                        <input type="text" value="1" size="20">
+                      </label>
+                    </div>
+                    <button class="btn btn--none-text btn--middle-size btn--green" type="button" data-count="increase">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </li>
+              <p>Пример вызова</p><code>
+                <pre>+card-product(cards[5])</pre></code>
             </div>
           </section>
         </div>

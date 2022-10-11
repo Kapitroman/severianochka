@@ -1,0 +1,5 @@
+mixin list-articles-grid(articles)
+  .list-articles.list-articles--grid
+    ul.list-articles__wrapper
+      each item in articles
+        +article(item)

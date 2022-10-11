@@ -3,6 +3,52 @@ extends ../components/base/layout
 block variables
   - const title = "UI-kit"
 
+  -
+    const cards = [
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        count: 4,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+      },
+      {
+        additionClass: "card-product--empty",
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+        empty: true,
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        order: 4,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное паропаы рпрапр арпгарп грпгарпга р апргргпрга",
+        rating: false,
+      },
+    ]
+
 block main
   style.
     main {
@@ -75,7 +121,7 @@ block main
     }
 
     .header-ui + main {
-      margin-top: 67px;
+      margin-top: 100px;
     }
 
     .header-ui__nav {
@@ -116,6 +162,8 @@ block main
       ul.header-ui__inner-list
         li.header-ui__inner-item
           a.header-ui__inner-link(href="#buttons", data-navigation-link) Buttons
+        li.header-ui__inner-item
+          a.header-ui__inner-link(href="#card-product", data-navigation-link) Card product
         li.header-ui__inner-item
           a.header-ui__inner-link(href="#modals", data-navigation-link) Modals
         li.header-ui__inner-item
@@ -184,7 +232,7 @@ block main
             pre +btn({href: "#", icon: {name: "icon-cart"}}).btn--none-text
 
         div(style = "margin-bottom: 45px;")
-          h3 Ссылка с текстом, который скрывается с уменьшением размера экрана
+          h3 Ссылка с текстом, текст скрывается с уменьшением размера экрана
           +btn({
             text: "Текст",
             href: "#",
@@ -215,6 +263,53 @@ block main
           p Пример вызова
           code
             pre +btn({text: "Текст", href: "#", icon: {name: "icon-cart", left: true}}).btn--middle-size.btn--green.btn--max-width-250
+
+    .container
+      section(id="card-product")
+        h2 Карточка товара
+
+        div(style = "margin-bottom: 45px;")
+          h3 Карточка товара
+          +card-product(cards[0])
+          p Пример вызова
+          code
+            pre +card-product(cards[0])
+
+        div(style = "margin-bottom: 45px;")
+          h3 Карточка товара c акциями
+          +card-product(cards[1])
+          p Пример вызова
+          code
+            pre +card-product(cards[1])
+
+        div(style = "margin-bottom: 45px;")
+          h3 Карточка товара, добавленная в корзину
+          +card-product(cards[2])
+          p Пример вызова
+          code
+            pre +card-product(cards[2])
+
+        div(style = "margin-bottom: 45px;")
+          h3 Карточка товара которого нет в наличии
+          +card-product(cards[3])
+          p Пример вызова
+          code
+            pre +card-product(cards[3])
+
+        div(style = "margin-bottom: 45px;")
+          h3 Карточка товара, добавленная в избранное
+          +card-product(cards[4])
+          p Пример вызова
+          code
+            pre +card-product(cards[4])
+
+        div(style = "margin-bottom: 45px;")
+          h3 Карточка товара на странице заказа товара
+          +card-product(cards[5])
+          p Пример вызова
+          code
+            pre +card-product(cards[5])
+
 
     .container
       section(id="modals")

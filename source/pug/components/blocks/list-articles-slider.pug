@@ -1,0 +1,5 @@
+mixin list-articles-slider(articles)
+  .list-articles.list-articles--slider.swiper
+    ul.list-articles__wrapper.swiper-wrapper
+      each item in articles
+        +article(item).swiper-slide

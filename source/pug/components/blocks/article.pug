@@ -1,0 +1,83 @@
+mixin article(options)
+
+  li.article&attributes(attributes)
+    .article__image
+      +picture(options.image[0], options.image[1], options.image[2], options.image[3], options.image[4], options.image[5])
+    .article__wrap-info
+      time.article__date(datetime=options.date[0])=options.date[1]
+      h3.article__title=options.title
+      p.article__text=options.text
+      +btn({
+        text: "Подробнее",
+        href: options.href
+      }).btn--middle-size.btn--green
+
+
+//-mixin article(options = {})
+
+  - const additionClass = options.additionClass ? `card-product ${options.additionClass}`: "card-product"
+  - const picture = options.picture ? options.picture : ["content/products", "product-02", "png", 272, 160, "изображение продукта"]
+  - const price = options.price ? options.price : "44,50 ₽"
+  - const discount = options.discount ? options.discount : false
+  - const order = options.order ? options.order : false
+  - const count = options.count ? options.count : false
+  - const title = options.title ? options.title : "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное..."
+  - const rating = options.rating ? options.rating : false
+  - const empty = options.empty ? options.empty : false
+  - const favourite = options.favourite ? options.favourite : false
+
+  li(class=additionClass)&attributes(attributes)
+    if favourite
+      +btn({
+        icon: {name: "icon-heart"},
+      }).btn--none-text.btn--middle-size.card-product__favourite.is-actived
+    else
+      +btn({
+        icon: {name: "icon-heart"},
+      }).btn--none-text.btn--middle-size.card-product__favourite
+    if order
+      .card-product__cart-count
+        +icon("icon-cart", 24, 24)
+        span=order
+    a.card-product__link-wrap(href="#")
+      .card-product__image
+        +picture(picture[0], picture[1], picture[2], picture[3], picture[4], picture[5])
+        if discount
+          p.card-product__discount-label=discount[0]
+      .card-product__text-wrap
+        .card-product__prices
+          if discount
+            p.card-product__card-price
+              span.card-product__card-price-value=price
+              span.card-product__card-price-text С картой
+            p.card-product__usual-price
+              span.card-product__usual-price-value=discount[1]
+              span.card-product__usual-price-text Обычная
+          else
+            p.card-product__card-price
+              span=price
+        p.card-product__title=title
+        if rating
+          .card-product__rating
+            each star in rating
+              if star
+                +icon("icon-star", 16, 16).is-rated
+              else
+                +icon("icon-star", 16, 16)
+    if empty
+      +btn({
+         text: "Нет в наличии"
+      }).btn--middle-size.disabled.btn--green.card-product__button
+    else
+      if count
+        +btn({
+          text: "В корзину"
+        }).btn--middle-size.btn--green-transparent.card-product__button.is-none
+        +product-count({
+          count: count
+        }).is-showed
+      else
+        +btn({
+          text: "В корзину"
+        }).btn--middle-size.btn--green-transparent.card-product__button
+        +product-count()
