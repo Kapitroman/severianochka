@@ -1,0 +1,15 @@
+mixin special-banner(options = {})
+
+  - const additionClass = options.additionClass ? `special-banner ${options.additionClass}`: "special-banner"
+  - const picture = options.picture ? options.picture : ["content/special-orders", "order-01", "png", 208, 139, "картинка баннера"]
+  - const title = options.title ? options.title : ""
+  - const text = options.text ? options.text : ""
+  - const href = options.href ? options.href : "#"
+
+  li(class=additionClass)&attributes(attributes)
+    a.special-banner__link(href=href)
+      .special-banner__wrap-text
+        h3.special-banner__title=title
+        p.special-banner__text=text
+      .special-banner__image
+        +picture(picture[0], picture[1], picture[2], picture[3], picture[4], picture[5])

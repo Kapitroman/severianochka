@@ -1,0 +1,169 @@
+.special-banner {
+  width: 528px;
+  height: auto;
+
+  &__link {
+    display: flex;
+
+    height: 100%;
+    border-radius: 4px;
+
+    background-color: $color-tuft-bush;
+
+    transition: box-shadow $trans-default;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 8px 16px 0px #CA936080;
+    }
+
+    overflow: hidden;
+  }
+
+  &__wrap-text {
+    padding-top: 30px;
+    padding-left: 40px;
+
+    @include vp-1023 {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 6px;
+
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.special-banner--green {
+  .special-banner__link {
+    background-color: $color-panache;
+  }
+}
+
+.special-banner--background {
+  .special-banner__link {
+    background-image: url("../img/content/special-orders/fon.svg");
+    background-size: cover;
+    background-position: right 50%;
+  }
+}
+
+.special-banner--image-1 {
+  .special-banner__wrap-text {
+    width: 57%;
+    padding-bottom: 44px;
+    padding-right: 34px;
+
+    @include vp-1023 {
+      flex-shrink: 0;
+
+      width: 59.94%;
+      padding-bottom: 27px;
+      padding-right: 17px;
+    }
+
+    @include vp-767 {
+      width: 62.8%;
+      padding-bottom: 18px;
+    }
+  }
+
+  .special-banner__image {
+    margin-top: 30px;
+    margin-bottom: auto;
+
+    transform: rotate(13.87deg);
+
+    img {
+      width: 207px;
+      height: 138px;
+      border-radius: 10px;
+
+      box-shadow: 0px 8px 47px 0px #C85A3582;
+
+      @include vp-1023 {
+        width: 160px;
+        height: 111px;
+      }
+    }
+  }
+}
+
+.special-banner--image-2 {
+  .special-banner__wrap-text {
+    width: 57%;
+    padding-bottom: 44px;
+    padding-right: 20px;
+
+    @include vp-1023 {
+      width: 47.88%;
+      padding-right: 24px;
+      padding-bottom: 27px;
+    }
+
+    @include vp-767 {
+      width: 55.3%;
+      padding-right: 38px;
+      padding-bottom: 18px;
+    }
+  }
+
+  .special-banner__image {
+    margin-left: auto;
+
+    margin-top: 14px;
+    margin-right: 42px;
+
+    @include vp-1023 {
+      margin-top: 24px;
+      margin-right: 36px;
+    }
+
+    @include vp-767 {
+      margin-right: 21px;
+    }
+
+    img {
+      width: 193px;
+      height: 186px;
+
+      @include vp-1023 {
+        width: 132px;
+        height: 126px;
+      }
+    }
+  }
+}

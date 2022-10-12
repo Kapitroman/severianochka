@@ -1,4 +1,4 @@
-.list-cards {
+.special-banners {
   overflow: visible;
 
   &__wrapper {
@@ -9,11 +9,11 @@
   }
 }
 
-.list-cards--grid {
-  .list-cards__wrapper {
+.special-banners--grid {
+  .special-banners__wrapper {
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 40px;
 
@@ -23,12 +23,11 @@
     list-style: none;
 
     @include vp-1023 {
-      grid-template-columns: 1fr 1fr 1fr;
       gap: 32px;
     }
 
     @include vp-767 {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 16px;
     }
 

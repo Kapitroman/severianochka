@@ -1,0 +1,5 @@
+mixin special-banners-grid(banners)
+  .special-banners.special-banners--grid
+    ul.special-banners__wrapper
+      each item in cards
+        +special-banner(banners)

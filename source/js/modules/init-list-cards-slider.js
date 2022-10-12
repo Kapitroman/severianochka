@@ -1,4 +1,7 @@
+import {hideButtonShowAll} from './hide-button-show-all';
+
 const listCardsSliderCollection = document.querySelectorAll('.list-cards--slider');
+const numberItemsScreen = [2, 3, 4]; //количество карточек увмещающиеся на мобильном, планшетном и десктопном экранах, чтобы убрать кнопку "Все ..."
 
 const initSwiper = (slider) => {
   let swiper;
@@ -37,7 +40,11 @@ const initListCardsSlider = () => {
   if (!listCardsSliderCollection.length) {
     return;
   }
-  listCardsSliderCollection.forEach((slider) => initSwiper(slider));
+
+  listCardsSliderCollection.forEach((slider) => {
+    initSwiper(slider);
+    hideButtonShowAll(slider, numberItemsScreen);
+  });
 };
 
 export {initListCardsSlider};

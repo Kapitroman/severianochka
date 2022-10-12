@@ -6,7 +6,8 @@ import {showAuthorizedMenu} from './modules/show-authorized-menu';
 import {initBannerSlider} from './modules/init-banner-slider';
 import {initListCardsSlider} from './modules/init-list-cards-slider';
 import {initListArticlesSlider} from './modules/init-list-articles-slider';
-import {hideButtonShowAll} from './modules/hide-button-show-all';
+import {initSpecialBannersSlider} from './modules/init-special-banners-slider';
+//import {hideButtonShowAll} from './modules/hide-button-show-all';
 import {initProductCount} from './modules/init-product-count';
 import {initFavouriteClick} from './modules/init-favourite-click';
 import {removeFocus} from './modules/remove-focus';
@@ -34,11 +35,12 @@ window.addEventListener('DOMContentLoaded', () => {
     initBannerSlider();
     initListCardsSlider();
     initListArticlesSlider();
-    hideButtonShowAll();
+    //hideButtonShowAll();
     initProductCount();
     initFavouriteClick();
     removeFocus();
     initCartButtonClick();
+    initSpecialBannersSlider();
   });
 });
 

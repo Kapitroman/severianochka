@@ -1,7 +1,7 @@
 import {hideButtonShowAll} from './hide-button-show-all';
 
-const listArticlesSliderCollection = document.querySelectorAll('.list-articles--slider');
-const numberItemsScreen = [1, 3, 3]; //количество карточек увмещающиеся на мобильном, планшетном и десктопном экранах, чтобы убрать кнопку "Все ..."
+const listSpecialBannersSliderCollection = document.querySelectorAll('.special-banners--slider');
+const numberItemsScreen = [1, 2, 2]; //количество карточек увмещающиеся на мобильном, планшетном и десктопном экранах, чтобы убрать кнопку "Все ..."
 
 const initSwiper = (slider) => {
   let swiper;
@@ -12,21 +12,21 @@ const initSwiper = (slider) => {
     spaceBetween: 16,
     breakpoints: {
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 32
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 40
-      }
+      },
     }
   });
 
   const clickButtonShowAllHandler = (evt) => {
     if (evt.target.closest('.section-title button')) {
       swiper.destroy(true, true);
-      slider.classList.remove('list-articles--slider');
-      slider.classList.add('list-articles--grid');
+      slider.classList.remove('special-banners--slider');
+      slider.classList.add('special-banners--grid');
       sectionCard.removeEventListener('click', clickButtonShowAllHandler);
       sectionCard.querySelector('.section-title button').classList.add('is-none');
     }
@@ -36,15 +36,15 @@ const initSwiper = (slider) => {
   sectionCard.addEventListener('click', clickButtonShowAllHandler);
 };
 
-const initListArticlesSlider = () => {
-  if (!listArticlesSliderCollection.length) {
+const initSpecialBannersSlider = () => {
+  if (!listSpecialBannersSliderCollection.length) {
     return;
   }
 
-  listArticlesSliderCollection.forEach((slider) => {
+  listSpecialBannersSliderCollection.forEach((slider) => {
     initSwiper(slider);
     hideButtonShowAll(slider, numberItemsScreen)
   });
 };
 
-export {initListArticlesSlider};
+export {initSpecialBannersSlider};

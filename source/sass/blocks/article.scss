@@ -11,6 +11,8 @@
 
   box-shadow: 1px 2px 4px 0px rgba($color-default-black, 0.1);
 
+  transition: box-shadow $trans-default;
+
   &:hover {
     box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
     /*

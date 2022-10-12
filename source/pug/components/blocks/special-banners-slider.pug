@@ -1,0 +1,5 @@
+mixin special-banners-slider(banners)
+  .special-banners.special-banners--slider.swiper
+    ul.special-banners__wrapper.swiper-wrapper
+      each item in banners
+        +special-banner(item).swiper-slide

@@ -138,7 +138,7 @@ block variables
       },
     ]
 
-  //-
+  -
     const cardProducts3 = [
       {
         additionClass: "",
@@ -345,6 +345,49 @@ block variables
       },
     ]
 
+  -
+    const specialBanners = [
+      {
+        additionClass: "special-banner--image-1",
+        picture: ["content/special-orders", "order-01", "png", 208, 139, "картинка баннера"],
+        title: "Оформите карту «Северяночка»",
+        text: "И получайте бонусы при покупке в магазинах и на сайте",
+        href: "#"
+      },
+      {
+        additionClass: "special-banner--green special-banner--image-2 special-banner--background",
+        picture: ["content/special-orders", "order-02", "png", 193, 186, "картинка баннера"],
+        title: "Покупайте акционные товары",
+        text: "И получайте вдвое больше бонусов",
+        href: "#"
+      },
+    ]
+
+  //-
+    const previewArticles1 = [
+      {
+        image: ["content/articles", "article-01", "jpg", 376, 162, "обложка для статьи"],
+        date: ["2021-03-06", "09.03.2021"],
+        title: "Режим использования масок и перчаток на территории магазинов",
+        text: "Подробная информация о режимах использования масок и перчаток на территории магазинов \"ЛЕНТА\". Информация обновляется каждый будний день.",
+        href: "#"
+      },
+      {
+        image: ["content/articles", "article-02", "jpg", 376, 162, "обложка для статьи"],
+        date: ["2021-03-06", "09.03.2021"],
+        title: "Весеннее настроение для каждой",
+        text: "8 Марта – это не просто Международный женский день, это ещё день тюльпанов, приятных сюрпризов и праздничных тёплых пожеланий.",
+        href: "#"
+      },
+      {
+        image: ["content/articles", "article-03", "jpg", 376, 162, "обложка для статьи"],
+        date: ["2020-02-22", "22.02.2020"],
+        title: "ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!",
+        text: "Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном приложении и получайте кешбэк 10% баллами в апреле!",
+        href: "#"
+      },
+    ]
+
 block main
   main
     //- на странице запрещен "голый" код
@@ -357,12 +400,21 @@ block main
     //-+section-cards("Акции", "Все акции", cardProducts, true)
     //-+section-cards("Акции", "Все акции", cardProducts2, true)
     //-+section-cards("Акции", "Все акции", cardProducts3, true)
+    //-+section-cards("Акции", "Все акции", cardProducts2, true)
 
     +section-cards("Акции", "Все акции", cardProductsActions, true)
     +section-cards("Новинки", "Все новинки", cardProductsNew, true)
     +section-cards("Покупали раньше", "Все покупки", cardProductsBoughtBefore, true)
 
+    +special-banners("Специальные предложения", "Все предложения", specialBanners, true)
+    //-+special-banners("Специальные предложения", "Все предложения", specialBanners, true)
+
     +section-articles("Статьи", "Все статьи", previewArticles, true)
-    //+section-articles("Статьи", false, previewArticles, false)
+
+    //-+section-articles("Статьи", false, previewArticles, false)
+    //-+section-articles("Статьи", "Все статьи", previewArticles1, true)
+
+
+
 
 block modals
