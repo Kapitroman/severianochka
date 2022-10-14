@@ -83,10 +83,22 @@ block variables
       },
     ]
 
+  -
+    const breadscrumbsData = [
+      {
+        href: "main.html",
+        text: "Главная",
+      },
+      {
+        text: "Каталог",
+      },
+    ]
+
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
+    +breadcrumbs(breadscrumbsData).breadcrumbs--margins
     .container
       h1.titles.titles--h1.title--margin-bottom Каталог
     section.section

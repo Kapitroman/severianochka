@@ -1,0 +1,13 @@
+mixin breadcrumbs(items)
+  - const n = items.length
+    .breadcrumbs&attributes(attributes)
+      .container
+        ul.breadcrumbs__list
+          if (n > 1)
+            - for (let i = 0; i < n-1; i++)
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href=items[i].href)=items[i].text
+                +icon("icon-arrow", 24, 24)
+            li.breadcrumbs__item= items[n-1].text
+          else
+            li.breadcrumbs__item= items.text
