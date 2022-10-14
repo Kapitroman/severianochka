@@ -74,6 +74,18 @@
   }
 }
 
+.title--margin-bottom {
+  margin-bottom: 60px;
+
+  @include vp-1023 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 32px;
+  }
+}
+
 
 
 

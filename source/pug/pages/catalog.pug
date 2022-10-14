@@ -10,13 +10,90 @@ block variables
   - const currentUrl = "Каталог" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
   - const userAuthorized = true
 
+  -
+    const catalogItems = [
+      {
+        href: "#",
+        text: "Молоко, сыр, яйцо",
+        additionClass: "category-card--large",
+        picture: ["content/catalog", "catalog-01", "png", 584, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Хлеб",
+        additionClass: "category-card--background-image",
+        picture: ["content/catalog", "catalog-02", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Фрукты и овощи",
+        picture: ["content/catalog", "catalog-03", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Замороженные продукты",
+        picture: ["content/catalog", "catalog-04", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Напитки",
+        picture: ["content/catalog", "catalog-05", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Кондитерские изделия",
+        picture: ["content/catalog", "catalog-06", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Чай, кофе",
+        picture: ["content/catalog", "catalog-07", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Бакалея",
+        picture: ["content/catalog", "catalog-08", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Здоровое питание",
+        picture: ["content/catalog", "catalog-09", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Зоотовары",
+        additionClass: "category-card--large",
+        picture: ["content/catalog", "catalog-10", "png", 584, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Детское питание",
+        picture: ["content/catalog", "catalog-11", "png", 272, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Мясо, птица, колбаса",
+        additionClass: "category-card--large-special",
+        picture: ["content/catalog", "catalog-12", "png", 584, 200, "изображение категории товара"]
+      },
+      {
+        href: "#",
+        text: "Непродовольственные товары",
+        picture: ["content/catalog", "catalog-13", "png", 272, 200, "изображение категории товара"]
+      },
+    ]
+
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    +intro()
-    p Каталог
-
-
+    .container
+      h1.titles.titles--h1.title--margin-bottom Каталог
+    section.section
+      h2.visually-hidden Список категорий
+      .container
+        ul.catalog-grid
+          each item in catalogItems
+            +category-card(item)
 
 block modals

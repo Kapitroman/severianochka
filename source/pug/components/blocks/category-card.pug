@@ -1,0 +1,13 @@
+mixin category-card(options = {})
+
+  - const additionClass = options.additionClass ? `category-card ${options.additionClass}`: "category-card"
+  - const picture = options.picture ? options.picture : ["content/catalog", "catalog-01", "png", 584, 200, "изображение категории товара"]
+  - const text = options.text ? options.text : "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное..."
+  - const href = options.href ? options.href : "#"
+
+  li(class=additionClass)&attributes(attributes)
+    a.category-card__link(href=href)
+      .category-card__image
+        +picture(picture[0], picture[1], picture[2], picture[3], picture[4], picture[5])
+      .category-card__background
+      h3.category-card__title!=text

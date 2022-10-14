@@ -139,11 +139,11 @@
                         </li>
                         <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Зоотовары</a>
                         </li>
-                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Непродовольственные товары</a>
-                        </li>
                         <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Детское питание</a>
                         </li>
                         <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Мясо, птица, колбаса</a>
+                        </li>
+                        <li class="catalog-menu__item"><a class="catalog-menu__link" href="#">Непродовольственные товары</a>
                         </li>
                       </ul>
                     </div>
@@ -223,63 +223,120 @@
         </div>
       </header>
       <main>
-        <div class="intro">
-          <div class="container">
-            <p style="margin-top: 40px;">Текст&nbsp;с&nbsp;мнемониками</p>
-            <p style="margin-top: 40px;">Пример использования +img()</p>
-            <p style="margin-bottom: 40px;"><img src="img/content/placeholder.png" srcset="img/content/placeholder@2x.png 2x" width="120" height="120" alt="Пример">
-            </p>
-          </div>
-          <div class="container"><a class="user-menu-item user-menu-item--not-empty is-active" href="#">
-              <div class="user-menu-item__icon-container">
-                <svg width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg><span class="user-menu-item__counter">1</span>
-              </div>
-              <div class="user-menu-item__label">Избранное</div></a><a class="user-menu-item" href="#">
-              <div class="user-menu-item__icon-container">
-                <svg width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg><span class="user-menu-item__counter">1</span>
-              </div>
-              <div class="user-menu-item__label">Избранное</div></a><a class="user-menu-item user-menu-item--not-empty" href="#">
-              <div class="user-menu-item__icon-container">
-                <svg width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-cart"></use>
-                </svg><span class="user-menu-item__counter">1</span>
-              </div>
-              <div class="user-menu-item__label">Избранное</div></a>
-            <div>
-              <div class="header-logo">
-                <div class="header-logo__icon">
-                  <svg width="40" height="32" aria-hidden="true">
-                    <use xlink:href="#icon-headerlogo"></use>
-                  </svg>
-                </div>
-                <div class="header-logo__text">
-                  <svg width="100" height="10" aria-hidden="true">
-                    <use xlink:href="#icon-headerlogotext"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="search">
-                <form method="get" action="#">
-                  <div class="custom-input custom-input--search">
-                    <label><span class="visually-hidden">поиск товара</span>
-                      <input type="search" name="search-good" placeholder="Найти товар" size="20">
-                    </label>
-                  </div>
-                  <button class="btn btn--none-text btn--middle-size btn--transparent" type="submit">
-                    <svg width="32" height="32" aria-hidden="true">
-                      <use xlink:href="#icon-search"></use>
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
+        <div class="container">
+          <h1 class="titles titles--h1 title--margin-bottom">Каталог</h1>
         </div>
-        <p>Каталог</p>
+        <section class="section">
+          <h2 class="visually-hidden">Список категорий</h2>
+          <div class="container">
+            <ul class="catalog-grid">
+              <li class="category-card category-card--large"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-01.webp, img/content/catalog/catalog-01@2x.webp 2x"><img src="img/content/catalog/catalog-01.png" srcset="img/content/catalog/catalog-01@2x.png 2x" width="584" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Молоко, сыр, яйцо</h3></a></li>
+              <li class="category-card category-card--background-image"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-02.webp, img/content/catalog/catalog-02@2x.webp 2x"><img src="img/content/catalog/catalog-02.png" srcset="img/content/catalog/catalog-02@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Хлеб</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-03.webp, img/content/catalog/catalog-03@2x.webp 2x"><img src="img/content/catalog/catalog-03.png" srcset="img/content/catalog/catalog-03@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Фрукты и овощи</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-04.webp, img/content/catalog/catalog-04@2x.webp 2x"><img src="img/content/catalog/catalog-04.png" srcset="img/content/catalog/catalog-04@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Замороженные продукты</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-05.webp, img/content/catalog/catalog-05@2x.webp 2x"><img src="img/content/catalog/catalog-05.png" srcset="img/content/catalog/catalog-05@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Напитки</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-06.webp, img/content/catalog/catalog-06@2x.webp 2x"><img src="img/content/catalog/catalog-06.png" srcset="img/content/catalog/catalog-06@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Кондитерские изделия</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-07.webp, img/content/catalog/catalog-07@2x.webp 2x"><img src="img/content/catalog/catalog-07.png" srcset="img/content/catalog/catalog-07@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Чай, кофе</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-08.webp, img/content/catalog/catalog-08@2x.webp 2x"><img src="img/content/catalog/catalog-08.png" srcset="img/content/catalog/catalog-08@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Бакалея</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-09.webp, img/content/catalog/catalog-09@2x.webp 2x"><img src="img/content/catalog/catalog-09.png" srcset="img/content/catalog/catalog-09@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Здоровое питание</h3></a></li>
+              <li class="category-card category-card--large"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-10.webp, img/content/catalog/catalog-10@2x.webp 2x"><img src="img/content/catalog/catalog-10.png" srcset="img/content/catalog/catalog-10@2x.png 2x" width="584" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Зоотовары</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-11.webp, img/content/catalog/catalog-11@2x.webp 2x"><img src="img/content/catalog/catalog-11.png" srcset="img/content/catalog/catalog-11@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Детское питание</h3></a></li>
+              <li class="category-card category-card--large-special"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-12.webp, img/content/catalog/catalog-12@2x.webp 2x"><img src="img/content/catalog/catalog-12.png" srcset="img/content/catalog/catalog-12@2x.png 2x" width="584" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Мясо, птица, колбаса</h3></a></li>
+              <li class="category-card"><a class="category-card__link" href="#">
+                  <div class="category-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/catalog/catalog-13.webp, img/content/catalog/catalog-13@2x.webp 2x"><img src="img/content/catalog/catalog-13.png" srcset="img/content/catalog/catalog-13@2x.png 2x" width="272" height="200" alt="изображение категории товара">
+                    </picture>
+                  </div>
+                  <div class="category-card__background"></div>
+                  <h3 class="category-card__title">Непродовольственные товары</h3></a></li>
+            </ul>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container">

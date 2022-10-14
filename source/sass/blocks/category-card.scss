@@ -1,0 +1,92 @@
+.category-card {
+
+  &__link {
+    position: relative;
+
+    display: block;
+
+    min-height: 200px;
+
+    box-shadow: 1px 2px 4px 0px #70C05B33;
+
+    transition: box-shadow $trans-default;
+
+    @include vp-1023 {
+      min-height: 140px;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+      height: 58.5%;
+
+      background-image: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 82.81%);
+
+      transition: background-image $trans-default;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px #FF663333;
+
+        &::after {
+          height: 88.5%;
+          background-image: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%);
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $color-default-white;
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.category-card--large {
+  grid-column: span 2;
+}
+
+.category-card--large-special {
+  grid-column: span 2;
+
+  @include vp-1023 {
+    grid-column: span 1;
+  }
+
+  @include vp-767 {
+    grid-column: span 2;
+    order: 2;
+  }
+}
