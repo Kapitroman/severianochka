@@ -1,0 +1,136 @@
+mixin our-shops()
+
+  -
+    const dataShops = [
+      {
+        region: "п.Щельяюр",
+        isActive: false,
+        mapContainer: "map1",
+        shops: [
+          {
+            labelIcon: "icon-parus",
+            address: "ул. Советская 87",
+            phone: ["+78214091330", "+7 82140 91330"]
+          },
+          {
+            labelIcon: "icon-pelys",
+            address: "ул. Рабочая 1",
+            phone: ["+78214091300", "+7 82140 91300"]
+          },
+          {
+            labelIcon: "icon-voshod",
+            address: "ул. Дорожная 10",
+            phone: ["+79042713590", "+7 904 271 35 90"]
+          },
+          {
+            labelIcon: "icon-rijbinushka",
+            address: "ул. Заводская 16",
+            phone: ["+78214091101", "+7 82140 91101"]
+          },
+        ]
+      },
+      {
+        region: "д.Вертеп",
+        isActive: true,
+        mapContainer: "map2",
+        shops: [
+          {
+            labelIcon: "icon-voshod",
+            address: "ул. Дорожная 10",
+            phone: ["+79042713590", "+7 904 271 35 90"]
+          },
+          {
+            labelIcon: "icon-parus",
+            address: "ул. Советская 87",
+            phone: ["+78214091330", "+7 82140 91330"]
+          },
+          {
+            labelIcon: "icon-rijbinushka",
+            address: "ул. Заводская 16",
+            phone: ["+78214091101", "+7 82140 91101"]
+          },
+          {
+            labelIcon: "icon-pelys",
+            address: "ул. Рабочая 1",
+            phone: ["+78214091300", "+7 82140 91300"]
+          },
+        ]
+      },
+      {
+        region: "с.Краснобор",
+        isActive: false,
+        mapContainer: "map3",
+        shops: [
+          {
+            labelIcon: "icon-parus",
+            address: "ул. Советская 87",
+            phone: ["+78214091330", "+7 82140 91330"]
+          },
+          {
+            labelIcon: "icon-voshod",
+            address: "ул. Дорожная 10",
+            phone: ["+79042713590", "+7 904 271 35 90"]
+          },
+          {
+            labelIcon: "icon-pelys",
+            address: "ул. Рабочая 1",
+            phone: ["+78214091300", "+7 82140 91300"]
+          },
+          {
+            labelIcon: "icon-rijbinushka",
+            address: "ул. Заводская 16",
+            phone: ["+78214091101", "+7 82140 91101"]
+          },
+        ]
+      },
+      {
+        region: "д.Диюр",
+        isActive: false,
+        mapContainer: "map4",
+        shops: [
+          {
+            labelIcon: "icon-pelys",
+            address: "ул. Рабочая 1",
+            phone: ["+78214091300", "+7 82140 91300"]
+          },
+          {
+            labelIcon: "icon-parus",
+            address: "ул. Советская 87",
+            phone: ["+78214091330", "+7 82140 91330"]
+          },
+          {
+            labelIcon: "icon-voshod",
+            address: "ул. Дорожная 10",
+            phone: ["+79042713590", "+7 904 271 35 90"]
+          },
+          {
+            labelIcon: "icon-rijbinushka",
+            address: "ул. Заводская 16",
+            phone: ["+78214091101", "+7 82140 91101"]
+          },
+        ]
+      },
+    ]
+
+  .our-shops.no-transition-global(data-tabs='parent', data-delay='300')&attributes(attributes)
+    .our-shops__controls(data-tabs='controls')
+      each item in dataShops
+        if item.isActive
+          button.our-shops__control.btn.btn--middle-size.btn--green.is-active(type='button', data-tabs='control')=item.region
+        else
+          button.our-shops__control.btn.btn--middle-size.btn--green(type='button', data-tabs='control')=item.region
+    .our-shops__content(data-tabs='content')
+      each item in dataShops
+        .our-shops__element(data-tabs='element')
+          ul.our-shops__contacts
+            each subItem in item.shops
+              li.our-shops__contact
+                .our-shops__contact-label
+                  +icon(subItem.labelIcon, 146, 20)
+                .our-shops__contact-adress
+                  +icon("icon-home", 30, 30)
+                  p.our-shops__contact-adress-text=subItem.address
+                .our-shops__contact-telephone
+                  +icon("icon-phone", 30, 30)
+                  a.our-shops__contact-link(href=`tel:${subItem.phone[0]}`)=subItem.phone[1]
+          .our-shops__map(id=item.mapContainer)

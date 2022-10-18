@@ -7,11 +7,12 @@ import {initBannerSlider} from './modules/init-banner-slider';
 import {initListCardsSlider} from './modules/init-list-cards-slider';
 import {initListArticlesSlider} from './modules/init-list-articles-slider';
 import {initSpecialBannersSlider} from './modules/init-special-banners-slider';
-//import {hideButtonShowAll} from './modules/hide-button-show-all';
 import {initProductCount} from './modules/init-product-count';
 import {initFavouriteClick} from './modules/init-favourite-click';
 import {removeFocus} from './modules/remove-focus';
 import {initCartButtonClick} from './modules/init-cart-button-click';
+import {initTabs} from './modules/init-tabs';
+import {initShopsMap} from './modules/init-map';
 
 // ---------------------------------
 
@@ -35,12 +36,13 @@ window.addEventListener('DOMContentLoaded', () => {
     initBannerSlider();
     initListCardsSlider();
     initListArticlesSlider();
-    //hideButtonShowAll();
     initProductCount();
     initFavouriteClick();
     removeFocus();
     initCartButtonClick();
     initSpecialBannersSlider();
+    initTabs();
+    initShopsMap();
   });
 });
 
