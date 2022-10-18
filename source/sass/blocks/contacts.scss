@@ -1,0 +1,50 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  margin-left: -80px;
+  margin-top: -30px;
+  padding-left: 0;
+
+  list-style: none;
+
+  &__item {
+    max-width: 500px;
+    margin-top: 30px;
+    margin-left: 80px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &__office {
+    display: flex;
+    align-items: flex-start;
+
+    margin: 0;
+    margin-bottom: 16px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+    }
+  }
+
+  &__phone {
+    padding-left: 38px;
+
+    font-weight: 700;
+    text-decoration: underline;
+
+    transition: color $trans-default;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-outrageous-orange;
+      }
+    }
+  }
+}

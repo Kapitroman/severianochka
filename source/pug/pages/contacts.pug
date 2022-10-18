@@ -1,0 +1,57 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Северяночка" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "Контакты" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const userAuthorized = true
+
+  -
+    const breadscrumbsData = [
+      {
+        href: "main.html",
+        text: "Главная",
+      },
+      {
+        text: "Контакты",
+      },
+    ]
+
+  -
+    const contactsList = [
+      {
+        labelIcon: "icon-home",
+        text: "Бухгалтерия, склад",
+        phone: ["+78214092619", "+7 82140 92619"]
+      },
+      {
+        labelIcon: "icon-percent",
+        text: "Вопросы по системе лояльности",
+        phone: ["+79087163397", "+7 908 716 33 97"]
+      },
+    ]
+
+block main
+  main
+
+    +breadcrumbs(breadscrumbsData).breadcrumbs--margins
+    .container
+      h1.titles.titles--h1.title--margin-bottom Контакты
+    section.section
+      h2.visually-hidden Список контактов
+      .container
+        ul.contacts
+          each item in contactsList
+            li.contacts__item
+              p.contacts__office
+                +icon(item.labelIcon, 30, 30)
+                span.contacts__name=item.text
+              a.contacts__phone(href=`tel:${item.phone[0]}`)=item.phone[1]
+
+    +section-shops("Наши магазины", false)
+
+block modals
