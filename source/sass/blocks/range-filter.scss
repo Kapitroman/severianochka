@@ -1,0 +1,100 @@
+.range-filter {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 13px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__inputs {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 13px;
+  }
+
+  &__input {
+    input {
+      width: 100%;
+    }
+  }
+
+  &__separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    &::before {
+      content: "";
+
+      width: 15px;
+      height: 2px;
+
+      background-color: $color-charcoal;
+    }
+  }
+
+  &__bar {
+    height: 24px;
+  }
+
+  .noUi-target {
+    top: 10px;
+
+    height: 4px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: none;
+
+    background-color: $color-hint-of-red;
+  }
+
+  .noUi-base, .noUi-connects {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+  }
+
+  .noUi-connect {
+    background-color: $color-mantis;
+  }
+
+  .noUi-handle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid $color-default-white;
+
+    background-color: $color-mantis;
+
+    transition: box-shadow $trans-default;
+    box-shadow: 0 0 0 0 $color-transparent;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 2px 4px 8px 0px #70C05B33;
+    }
+  }
+
+  .noUi-horizontal .noUi-handle {
+    right: -12px;
+    top: -10px;
+  }
+}

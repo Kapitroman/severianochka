@@ -1,6 +1,6 @@
 .btn {
   display: inline-flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   padding: 13px 13px;
@@ -33,7 +33,11 @@
   }
 
   span {
-    width: calc(100% - 32px - 8px);
+    flex-grow: 1;
+
+    padding-left: 8px;
+    padding-right: 8px;
+
     text-align: center;
 
     overflow-wrap: break-word;
@@ -62,10 +66,6 @@
       width: 24px;
       height: 24px;
     }
-
-    span {
-      width: calc(100% - 24px - 8px);
-    }
   }
 
   &--small-size {
@@ -77,6 +77,22 @@
 
   &--none-text {
     width: auto;
+  }
+
+  &--close-filtr {
+    width: auto;
+    padding: 0;
+
+    color: $color-default-white;
+
+    background-color: $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        color: $color-outrageous-orange;
+      }
+    }
   }
 
   &--none-text-width-size {
@@ -120,13 +136,6 @@
       }
     }
   }
-  /*
-  &--orange {
-    border: 1px solid $color-outrageous-orange;
-
-    background-color: $color-outrageous-orange;
-  }
-  */
 
   &--grey {
     border: 1px solid $color-suva-grey;
@@ -182,6 +191,25 @@
       &:active {
         box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
         opacity: 0.3;
+      }
+    }
+  }
+
+  &--filter-text {
+    padding: 4px 8px;
+    border-color: $color-hint-of-red;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-zambezi;
+
+    background-color: $color-hint-of-red;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px rgba($color-suva-grey, 0.2);
+        opacity: 0.7;
       }
     }
   }

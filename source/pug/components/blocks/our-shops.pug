@@ -116,9 +116,13 @@ mixin our-shops()
     .our-shops__controls(data-tabs='controls')
       each item in dataShops
         if item.isActive
-          button.our-shops__control.btn.btn--middle-size.btn--green.is-active(type='button', data-tabs='control')=item.region
+          +btn({
+            text: item.region
+          })(data-tabs='control').our-shops__control.btn--middle-size.btn--green.is-active
         else
-          button.our-shops__control.btn.btn--middle-size.btn--green(type='button', data-tabs='control')=item.region
+          +btn({
+            text: item.region
+          })(data-tabs='control').our-shops__control.btn--middle-size.btn--green
     .our-shops__content(data-tabs='content')
       each item in dataShops
         .our-shops__element(data-tabs='element')

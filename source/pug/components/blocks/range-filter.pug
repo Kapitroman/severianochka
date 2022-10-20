@@ -1,0 +1,23 @@
+mixin range-filter()
+  .range-filter
+    .range-filter__header
+      h3.range-filter__title Цена
+      +btn({
+        text: "Очистить"
+      }).btn--filter-text
+    .range-filter__inputs
+      +custom-input({
+        inputLabelHidden: "Цена минимальная",
+        inputId: "input-with-keypress-0",
+        inputName: "price-min",
+        inputSize: 10
+      }).range-filter__input
+      .range-filter__separator
+      +custom-input({
+        inputLabelHidden: "Цена максимальная",
+        inputId: "input-with-keypress-1",
+        inputName: "price-max",
+        inputSize: 10
+      }).range-filter__input
+    .range-filter__bar
+      div(id="range-slider")
