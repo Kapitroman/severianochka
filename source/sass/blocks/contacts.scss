@@ -9,6 +9,11 @@
 
   list-style: none;
 
+  @include vp-1023 {
+    margin-left: -40px;
+    margin-top: -16px;
+  }
+
   &__item {
     max-width: 500px;
     margin-top: 30px;
@@ -16,6 +21,20 @@
 
     font-size: 24px;
     line-height: 36px;
+
+    @include vp-1023 {
+      max-width: 400px;
+      margin-top: 16px;
+      margin-left: 40px;
+
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &__office {
@@ -25,10 +44,23 @@
     margin: 0;
     margin-bottom: 16px;
 
+    @include vp-1023 {
+      margin-bottom: 8px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 4px;
+    }
+
     svg {
       width: 30px;
       height: 30px;
       margin-right: 8px;
+
+      @include vp-1023 {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
@@ -39,6 +71,10 @@
     text-decoration: underline;
 
     transition: color $trans-default;
+
+    @include vp-1023 {
+      padding-left: 32px;
+    }
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,

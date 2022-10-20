@@ -4794,6 +4794,32 @@ a.header-logo.is-active {
     margin-bottom: 16px;
   }
 
+  .contacts {
+    margin-left: -40px;
+    margin-top: -16px;
+  }
+
+  .contacts__item {
+    max-width: 400px;
+    margin-top: 16px;
+    margin-left: 40px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .contacts__office {
+    margin-bottom: 8px;
+  }
+
+  .contacts__office svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contacts__phone {
+    padding-left: 32px;
+  }
+
   .banner-slider {
     margin-bottom: 60px;
   }
@@ -4804,6 +4830,38 @@ a.header-logo.is-active {
 
   .section:last-child {
     margin-bottom: 60px;
+  }
+
+  .our-shops__controls {
+    margin-left: -16px;
+    margin-top: -16px;
+  }
+
+  .our-shops__control {
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+
+  .our-shops__contacts {
+    margin-left: -24px;
+    margin-top: -16px;
+  }
+
+  .our-shops__contact {
+    margin-left: 24px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .our-shops__contact-adress svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .our-shops__contact-telephone svg {
+    width: 24px;
+    height: 24px;
   }
 
   .main-nav__catalog .btn {
@@ -5065,6 +5123,15 @@ a.header-logo.is-active {
     margin-bottom: 8px;
   }
 
+  .contacts__item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contacts__office {
+    margin-bottom: 4px;
+  }
+
   .banner-slider {
     margin-bottom: 40px;
   }
@@ -5075,6 +5142,33 @@ a.header-logo.is-active {
 
   .section:last-child {
     margin-bottom: 40px;
+  }
+
+  .our-shops__controls {
+    margin-left: -8px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+  }
+
+  .our-shops__control {
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .our-shops__contacts {
+    margin-left: -32px;
+    margin-bottom: 16px;
+  }
+
+  .our-shops__contact {
+    margin-left: 32px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .our-shops__contact-label svg {
+    width: 117px;
+    height: 16px;
   }
 
   .header {

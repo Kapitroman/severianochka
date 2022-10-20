@@ -9,6 +9,17 @@
     margin-left: -24px;
     margin-top: -24px;
     margin-bottom: 32px;
+
+    @include vp-1023 {
+      margin-left: -16px;
+      margin-top: -16px;
+    }
+
+    @include vp-767 {
+      margin-left: -8px;
+      margin-top: -8px;
+      margin-bottom: 16px;
+    }
   }
 
   &__control {
@@ -23,6 +34,16 @@
     &.is-active {
       opacity: 1;
       pointer-events: none;
+    }
+
+    @include vp-1023 {
+      margin-left: 16px;
+      margin-top: 16px;
+    }
+
+    @include vp-767 {
+      margin-left: 8px;
+      margin-top: 8px;
     }
   }
 
@@ -45,6 +66,16 @@
     padding-left: 0;
 
     list-style: none;
+
+    @include vp-1023 {
+      margin-left: -24px;
+      margin-top: -16px;
+    }
+
+    @include vp-767 {
+      margin-left: -32px;
+      margin-bottom: 16px;
+    }
   }
 
   &__contact {
@@ -55,6 +86,21 @@
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;
+
+    @include vp-1023 {
+      margin-left: 24px;
+      margin-top: 16px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      margin-left: 32px;
+
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__contact-label {
@@ -64,6 +110,11 @@
     svg {
       width: 146px;
       height: 20px;
+
+      @include vp-767 {
+        width: 117px;
+        height: 16px;
+      }
     }
   }
 
@@ -78,6 +129,11 @@
       width: 30px;
       height: 30px;
       margin-right: 8px;
+
+      @include vp-1023 {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
@@ -94,6 +150,11 @@
       width: 30px;
       height: 30px;
       margin-right: 8px;
+
+      @include vp-1023 {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 
