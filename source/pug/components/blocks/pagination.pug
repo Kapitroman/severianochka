@@ -1,0 +1,36 @@
+mixin pagination(n)
+  ul.pagination
+    li.pagination__item.is-disabled.is-left
+      +btn({
+        icon: {name: "icon-doublearrow"},
+        href: "#"
+      }).btn--middle-size.btn--grey.btn--transparent
+    li.pagination__item.is-disabled.is-left
+      +btn({
+        icon: {name: "icon-singlearrow"},
+        href: "#"
+      }).btn--middle-size.btn--grey.btn--transparent
+    - for (let i = 1; i <= n; i++)
+      if i === 1
+        li.pagination__item.is-actived
+          +btn({
+            text: i,
+            href: "#"
+          }).btn--middle-size.btn--grey.btn--transparent
+      else
+        li.pagination__item
+          +btn({
+            text: i,
+            href: "#"
+          }).btn--middle-size.btn--grey.btn--transparent
+    li.pagination__item
+      +btn({
+        icon: {name: "icon-singlearrow"},
+        href: "#"
+      }).btn--middle-size.btn--grey.btn--transparent
+    li.pagination__item
+      +btn({
+        icon: {name: "icon-doublearrow"},
+        href: "#"
+      }).btn--middle-size.btn--grey.btn--transparent
+

@@ -14,7 +14,7 @@ const initRangeSlider = () => {
   const buttonClear = rangeFilter.querySelector('.range-filter__header button');
 
   noUiSlider.create(slider, {
-    start: [0, 1000],
+    start: [100, 900],
     connect: true,
     range: {
         'min': 0,

@@ -2,8 +2,8 @@
   position: relative;
 
   display: flex;
-  width: 500px;
-  padding: 20px 0;
+  //width: 500px;
+  //padding: 20px 0;
 
   &__error {
     position: absolute;
@@ -37,6 +37,19 @@
     span {
       margin-bottom: 0;
       margin-left: 0;
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        .custom-toggle__icon {
+          border: 1px solid rgba($color-default-black, 0.8);
+
+          &::before {
+            background-color: rgba($color-default-black, 0.8);
+          }
+        }
+      }
     }
   }
 
@@ -104,11 +117,54 @@
     }
   }
 
-  input:checked + .custom-toggle__icon {
-    border: 1px solid rgba($color-default-black, 0.8);
+  &--toggle {
+    label {
+      padding-left: 56px;
+    }
 
-    &::before {
-      background-color: rgba($color-default-black, 0.8);
+    .custom-toggle__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 46px;
+      height: 24px;
+      border-radius: 32px;
+      border: 1px solid #E0E0E0;
+
+      background-color: #F8F8F8;
+
+      transition: border $trans-default, background-color $trans-default;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2px;
+
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid rgba($color-default-black, 0.04);
+
+        background-color: $color-default-white;
+
+        box-shadow: 0px 1px 1px 0px rgba($color-default-black, 0.08), 0px 2px 6px 0px rgba($color-default-black, 0.15);
+
+        transform: translateY(-50%);
+
+        transition: border $trans-default, background-color $trans-default, left $trans-default;
+      }
+    }
+
+    input:checked + .custom-toggle__icon {
+      border: 1px solid $color-mantis;
+
+      background-color: $color-mantis;
+
+      &::before {
+        left: calc(100% - 22px);
+      }
     }
   }
 

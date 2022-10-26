@@ -5,4 +5,4 @@ mixin section-cards(title, text, cards, isSlider)
       if isSlider
         +list-cards-slider(cards)
       else
-        +list-cards-grid(cards)
+        +list-cards-grid(cards).list-cards--grid

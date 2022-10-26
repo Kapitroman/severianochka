@@ -1,0 +1,11 @@
+mixin active-filter(filterData)
+  if filterData.display
+    .active-filter
+      if filterData.data
+        p.active-filter__text
+          | Фильтр: от <span> #{filterData.data[0]} </span>
+          | до <span> #{filterData.data[1]} </span>
+      else
+        p.active-filter__text=filterData.text
+      button(type="button").active-filter__clear-button
+        +icon("icon-close", 24, 24)

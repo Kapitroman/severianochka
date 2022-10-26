@@ -8,37 +8,101 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "Избранное" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
-  - const userAuthorized = false
+  - const userAuthorized = true
+
+  -
+    const cardProductsNew = [
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+    ]
+
+  -
+    const breadscrumbsData = [
+      {
+        href: "main.html",
+        text: "Главная",
+      },
+      {
+        text: "Избранное",
+      },
+    ]
+
+  -
+    const activeFilterData = [
+      {
+        data: [100, 900],
+        display: true
+      },
+      {
+        text: "Фильтр: \"Молоко\"",
+        display: true
+      },
+      {
+        text: "Фильтр: \"Сливки\"",
+      },
+      {
+        text: "Фильтр: \"Яйцо\"",
+      },
+      {
+        text: "Фильтр: \"В наличии\"",
+        display: true
+      },
+    ]
 
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
-    div(style="display: flex;")
-      div(style="width: 272px;")
-        +range-filter()
-        //-.range-filter
-          .range-filter__header
-            h3.range-filter__title Цена
-            +btn({
-              text: "Очистить"
-            }).btn--filter-text
-          .range-filter__inputs
-            +custom-input({
-              inputLabelHidden: "Цена минимальная",
-              inputId: "input-with-keypress-0",
-              inputName: "price-min",
-              inputSize: 10
-            }).range-filter__input
-            .range-filter__separator
-            +custom-input({
-              inputLabelHidden: "Цена максимальная",
-              inputId: "input-with-keypress-1",
-              inputName: "price-max",
-              inputSize: 10
-            }).range-filter__input
-          .range-filter__bar
-            div(id="range-slider")
+    +breadcrumbs(breadscrumbsData).breadcrumbs--margins
+    +title-h1("Избранное").titles--h1
+    //-.container
+      h1.titles.titles--h1.title--margin-bottom Избранное
+    section.section
+      h2.visually-hidden Избранные товары с фильтром с фильтром
+      .container
+        +filter-grid()
+    //-+simple-section("Избранные товары с фильтром с фильтром")
+      +filter-grid()
+
 
   script
     include ../../js/inline/wNumb.js

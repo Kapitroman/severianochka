@@ -1,0 +1,9 @@
+//-mixin title-h1(options = {})
+  - const text = options.text ? options.text : ""
+  - const additionalClass = `titles title--margin-bottom ${additionalClass}` : "titles titles--h1 title--margin-bottom"
+  .container
+    h1(class=additionalClass)=text
+
+mixin title-h1(text)
+  .container
+    h1.titles.title--margin-bottom&attributes(attributes)=text

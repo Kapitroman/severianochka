@@ -1,0 +1,8 @@
+
+mixin active-filters-panel()
+  .active-filters-panel&attributes(attributes)
+    each item in activeFilterData
+      +active-filter(item)
+    +btn({
+      text: "Очистить фильтры"
+    }).btn--filter-text

@@ -1,5 +1,5 @@
 mixin list-cards-grid(cards)
-  .list-cards.list-cards--grid
+  .list-cards&attributes(attributes)
     ul.list-cards__wrapper
       each item in cards
         +card-product(item)

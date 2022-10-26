@@ -1,0 +1,46 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 0;
+
+  list-style: none;
+
+  .is-disabled {
+    a {
+      opacity: 0.5;
+
+      pointer-events: none;
+    }
+  }
+
+  .is-actived {
+    a {
+      color: $color-outrageous-orange;
+
+      pointer-events: none;
+    }
+  }
+
+  .is-left {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .pagination__item + .pagination__item {
+    margin-left: 16px;
+
+    @include vp-1023 {
+      margin-left: 8px;
+    }
+
+    @include vp-767 {
+      margin-left: 0;
+    }
+  }
+}

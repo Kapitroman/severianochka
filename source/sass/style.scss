@@ -21,7 +21,6 @@
 // Blocks
 // ---------------------------------
 @import "blocks/footer";
-@import "blocks/modal";
 @import "blocks/btn";
 @import "blocks/titles";
 @import "blocks/banner";
@@ -40,6 +39,12 @@
 @import "blocks/data-tabs";
 @import "blocks/contacts";
 @import "blocks/range-filter";
+@import "blocks/filters";
+@import "blocks/filter-grid";
+@import "blocks/active-filters-panel";
+@import "blocks/active-filter";
+@import "blocks/pagination";
+@import "blocks/modal";
 
 //Sections
 

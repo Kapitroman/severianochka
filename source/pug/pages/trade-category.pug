@@ -8,12 +8,135 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "Молоко, сыр, яйцо" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
-  - const userAuthorized = true
+  - const userAuthorized = false
+
+  -
+    const cardProductsNew = [
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+       {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+    ]
+
+  -
+    const breadscrumbsData = [
+      {
+        href: "main.html",
+        text: "Главная",
+      },
+      {
+        href: "catalog.html",
+        text: "Каталог",
+      },
+      {
+        text: "Молоко, сыр, яйцо",
+      },
+    ]
+
+  -
+    const activeFilterData = [
+      {
+        data: [100, 900],
+        display: true
+      },
+      {
+        text: "Фильтр: \"Молоко\"",
+        display: true
+      },
+      {
+        text: "Фильтр: \"Сливки\"",
+      },
+      {
+        text: "Фильтр: \"Яйцо\"",
+      },
+      {
+        text: "Фильтр: \"В наличии\"",
+        display: true
+      },
+    ]
+
+  //-
+    const filterGroup1 = [
+      {
+        inputLabel: "Молоко",
+        inputName: "milk",
+        inputChecked: true
+      },
+      {
+        inputLabel: "Сливки",
+        inputName: "cream",
+      },
+      {
+        inputLabel: "Яйцо",
+        inputName: "egg",
+      },
+    ]
+
+  //-
+    const filterGroup2 = [
+      {
+        inputLabel: "В наличии",
+        inputName: "in-stock",
+        inputChecked: true
+      },
+    ]
 
 block main
   main
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
+    +breadcrumbs(breadscrumbsData).breadcrumbs--margins
+    +title-h1("Молоко, сыр, яйцо").titles--category
+    //-.container
+      h1.titles.titles--h1.title--margin-bottom Молоко, сыр, яйцо
+    section.section
+      h2.visually-hidden Товары категории с фильтром
+      .container
+        +filter-grid()
 
+  script
+    include ../../js/inline/wNumb.js
 
 block modals

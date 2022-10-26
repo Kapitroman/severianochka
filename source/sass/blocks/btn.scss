@@ -118,8 +118,29 @@
     max-width: 250px;
   }
 
+  &--filter-text {
+    padding: 8px;
+    border: none;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-zambezi;
+
+    background-color: $color-hint-of-red;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px rgba($color-suva-grey, 0.2);
+        opacity: 0.7;
+      }
+    }
+  }
+
   &--green {
     border: 1px solid $color-mantis;
+
+    color: $color-default-white;
 
     background-color: $color-mantis;
 
@@ -138,11 +159,13 @@
   }
 
   &--grey {
-    border: 1px solid $color-suva-grey;
+    //border: 1px solid $color-suva-grey;
+    border: 1px solid $color-hint-of-red;
 
-    color: $color-suva-grey;
+    color: $color-zambezi;
 
-    background-color: $color-transparent;
+    //background-color: $color-transparent;
+    background-color: $color-hint-of-red;
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
@@ -191,25 +214,6 @@
       &:active {
         box-shadow: 0px 2px 0px 0px rgba($color-default-black, 0.2) inset;
         opacity: 0.3;
-      }
-    }
-  }
-
-  &--filter-text {
-    padding: 4px 8px;
-    border-color: $color-hint-of-red;
-
-    font-size: 12px;
-    line-height: 18px;
-    color: $color-zambezi;
-
-    background-color: $color-hint-of-red;
-
-    @media (hover: hover), screen and (min-width: 0\0) {
-      &:hover,
-      &:focus {
-        box-shadow: 4px 8px 16px 0px rgba($color-suva-grey, 0.2);
-        opacity: 0.7;
       }
     }
   }

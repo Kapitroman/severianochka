@@ -1,0 +1,65 @@
+mixin filter-grid()
+
+  -
+    const filterGroup1 = [
+      {
+        inputLabel: "Молоко",
+        inputName: "milk",
+        inputChecked: true
+      },
+      {
+        inputLabel: "Сливки",
+        inputName: "cream",
+      },
+      {
+        inputLabel: "Яйцо",
+        inputName: "egg",
+      },
+    ]
+
+  -
+    const filterGroup2 = [
+      {
+        inputLabel: "В наличии",
+        inputName: "in-stock",
+        inputChecked: true
+      },
+    ]
+
+  .filter-grid
+    .filters
+      .filters__wrapper
+        .filters__content
+          .filters__header
+            h2.filters__title Фильтр
+            +btn({
+              icon: {name: "icon-close"}
+            })(aria-label="Закрыть попап").filters__close-button.btn--middle-size.btn--transparent.btn--none-text
+          +active-filters-panel().is-showed
+          form(method = "get", action="#")
+            .filters__section
+              .filters__group
+                +range-filter()
+              .filters__group
+                each item in filterGroup1
+                  +custom-toggle(item).custom-toggle--toggle
+              .filters__group
+                each item in filterGroup2
+                  +custom-toggle(item).custom-toggle--toggle
+            +btn({
+              text: "Применить",
+              type: "submit"
+            }).btn--middle-size.filters__submit-button
+    .filter-grid__cards-group
+      +btn({
+        href: "#",
+        text: "Фильтр"
+      })(data-open-modal="filters").filter-grid__button-filter.btn--filter-text.btn--green
+      +active-filters-panel().is-showed
+      .filter-grid__cards-grid
+        +list-cards-grid(cardProductsNew).list-cards--grid-filter
+
+      +btn({
+        text: "Показать еще"
+      }).btn--middle-size.btn--grey.filter-grid__button-more
+      +pagination(4)
