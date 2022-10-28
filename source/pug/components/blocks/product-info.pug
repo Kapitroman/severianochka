@@ -1,0 +1,50 @@
+mixin product-info()
+  -
+    const productInfo = {
+      usefulPrice: "192,69 ₽",
+      cardPrice: "108,99 ₽",
+      info: [
+        {
+          key: "Бренд",
+          value: "ПРОСТОКВАШИНО"
+        },
+        {
+          key: "Страна производителя",
+          value: "Россия"
+        },
+        {
+          key: "Упаковка",
+          value: "180 г"
+        },
+      ]
+    }
+
+  .product-info
+    .product-info__prices
+      p.product-info__useful-price
+        span.product-info__useful-value=productInfo.usefulPrice
+        span.product-info__useful-text Обычная цена
+      p.product-info__card-price
+        span.product-info__card-value=productInfo.cardPrice
+        span.product-info__useful-text
+          | С картой Северяночки
+          +icon("icon-prompt", 24, 24)
+    div(data-product).product-info__actions
+      +btn({
+        icon: {name: "icon-cart", left: true},
+        text: "В корзину",
+        cart: true
+      }).product-info__cart-button
+      +product-count()
+      p.product-info__bonus
+        +icon("icon-smile", 24, 24)
+        span Вы получаете 10 бонусов
+      +btn({
+        icon: {name: "icon-bell", left: true},
+        text: "Уведомить о снижении цены"
+      }).btn--middle-size.btn--product-panel.product-info__bell-button
+    .product-info__specification
+      each item in productInfo.info
+        p.product-info__specification-row
+          span.product-info__specification-key=item.key
+          span.product-info__specification-value=item.value

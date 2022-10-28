@@ -56,13 +56,15 @@ mixin card-product(options = {})
     else
       if count
         +btn({
+          cart: true,
           text: "В корзину"
         }).btn--middle-size.btn--green-transparent.card-product__button.is-none
         +product-count({
           count: count
-        }).is-showed
+        }).is-showed.product-count--middle-size
       else
         +btn({
-          text: "В корзину"
+          text: "В корзину",
+          cart: true
         }).btn--middle-size.btn--green-transparent.card-product__button
-        +product-count()
+        +product-count().product-count--middle-size

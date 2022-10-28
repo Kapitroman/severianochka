@@ -21,3 +21,30 @@
     padding: 0 12px;
   }
 }
+
+.container--shadow {
+  padding: 0 111px;
+
+  @include vp-1439 {
+    padding: 0 111px;
+  }
+
+  @include vp-1279 {
+    padding: 0 61px;
+  }
+
+  @include vp-1023 {
+    padding: 0 11px;
+  }
+
+  @include vp-767 {
+    padding: 0 7px;
+  }
+}
+
+.shadow-box {
+  overflow: hidden;
+
+  padding: 5px;
+  padding-top: 0;
+}

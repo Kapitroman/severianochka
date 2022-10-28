@@ -16,6 +16,7 @@ import {initTabs} from './modules/init-tabs';
 import {initShopsMap} from './modules/init-map';
 import {initRangeSlider} from './modules/init-range-slider';
 import {toggleFilterMode} from './modules/toggle-filter-mode';
+import {initProductSlider} from './modules/init-product-slider';
 
 // ---------------------------------
 
@@ -48,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initShopsMap();
     initRangeSlider();
     toggleFilterMode();
+    initProductSlider();
   });
 });
 

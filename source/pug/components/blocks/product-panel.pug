@@ -1,0 +1,22 @@
+mixin product-panel(article, rating, link)
+  .product-panel
+    p.product-panel__article арт. <span> #{article} </span>
+    .product-panel__reviews
+      if rating
+        .product-panel__rating
+            each star in rating
+              if star
+                +icon("icon-star", 16, 16).is-rated
+              else
+                +icon("icon-star", 16, 16)
+      a(href=link[0]).product-panel__review-link
+        span=link[1]
+        span=link[2]
+    +btn({
+      icon: {name: "icon-share", left: true},
+      text: "Поделиться"
+    }).btn--middle-size.btn--product-panel.product-panel__sharing
+    +btn({
+      icon: {name: "icon-heart", left: true},
+      text: "В избраное"
+    }).btn--middle-size.btn--product-panel.product-panel__favourite

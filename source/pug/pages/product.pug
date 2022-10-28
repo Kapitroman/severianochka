@@ -1,0 +1,168 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Северяночка" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const userAuthorized = false
+
+  -
+    const cardProductsOther = [
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+       {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+    ]
+
+  -
+    const breadscrumbsData = [
+      {
+        href: "main.html",
+        text: "Главная",
+      },
+      {
+        href: "catalog.html",
+        text: "Каталог",
+      },
+      {
+        href: "trade-category.html",
+        text: "Молоко, сыр, яйцо",
+      },
+      {
+        text: "Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г",
+      },
+
+    ]
+
+  -
+    const cardProductsActions = [
+      {
+        picture: ["content/products", "product-01", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Г/Ц Блинчики с мясом вес, Россия",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        count: 4,
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное рпрваып рпапыав раорпраорпы  рррыпаопро рппыапавпав ",
+        rating: [true, true, true, false, false],
+        favourite: true
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы ",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыропорпавы роапропараопрап оравпроавпрвапмрра",
+      },
+      {
+        picture: ["content/products", "product-01", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Г/Ц Блинчики с мясом вес, Россия",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное рпрваып рпапыав раорпраорпы  рррыпаопро рппыапавпав ",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы ",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        discount: ["-50%", "50,50 ₽"],
+        title: "Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сыропорпавы роапропараопрап оравпроавпрвапмрра",
+      },
+    ]
+
+block main
+  main
+    //- на странице запрещен "голый" код
+    //- все блоки вставляются из папки pug/components/blocks
+    +breadcrumbs(breadscrumbsData).breadcrumbs--margins
+    +title-h1("Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г").titles--product
+
+    section.section
+      h2.visually-hidden Товар: вид и описание
+      .container
+        .product-grid
+          .product-grid__panel
+            +product-panel(371431, [true, true, true, false, false], ["#", 3, "отзыва"])
+          .product-grid__slider
+            +product-slider()
+          .product-grid__info
+            +product-info
+          .product-grid__similar
+            +product-similar()
+
+    +section-cards("С этим товаром покупают", "Все товары", cardProductsOther, true)
+
+    +section-cards("Акции", "Все акции", cardProductsActions, true)
+
+
+block modals

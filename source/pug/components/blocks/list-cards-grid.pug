@@ -2,4 +2,4 @@ mixin list-cards-grid(cards)
   .list-cards&attributes(attributes)
     ul.list-cards__wrapper
       each item in cards
-        +card-product(item)
+        +card-product(item)(data-product)

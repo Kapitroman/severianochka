@@ -1,8 +1,9 @@
 mixin section-cards(title, text, cards, isSlider)
   section.section&attributes(attributes)
-    .container
-      +section-title(title, text)
-      if isSlider
-        +list-cards-slider(cards)
-      else
-        +list-cards-grid(cards).list-cards--grid
+    .container.container--shadow
+      .shadow-box
+        +section-title(title, text)
+        if isSlider
+          +list-cards-slider(cards)
+        else
+          +list-cards-grid(cards).list-cards--grid

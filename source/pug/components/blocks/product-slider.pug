@@ -1,0 +1,22 @@
+mixin product-slider()
+  -
+    const product = {
+      path: "content/products",
+      images: ["product-slider", "product-slider", "product-slider", "product-slider", "product-slider", "product-slider", "product-slider", "product-slider", "product-slider", "product-slider"],
+      format: "png",
+      discount: "-50%"
+    }
+
+  .product-slider
+    .product-slider__thumbs.swiper(thumbsSlider="")
+      ul.swiper-wrapper.product-slider__thumbs-wrapper
+        each image in product.images
+          li.swiper-slide
+            +picture(product.path, image, product.format, 64, 63, "изображение товара")
+
+    .product-slider__main.swiper
+      ul.swiper-wrapper.product-slider__main-wrapper
+        each image in product.images
+          li.swiper-slide
+            +picture(product.path, image, product.format, 512, 504, "изображение товара")
+      .product-slider__discount-label=product.discount

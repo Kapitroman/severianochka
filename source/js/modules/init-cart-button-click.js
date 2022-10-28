@@ -1,4 +1,5 @@
-const cardProductButtonCollection = document.querySelectorAll('.card-product__button:not(.disabled)');
+//const cardProductButtonCollection = document.querySelectorAll('.card-product__button:not(.disabled)');
+const cardProductButtonCollection = document.querySelectorAll('[data-button]:not(.disabled)');
 const cartMenuItem = document.querySelector('[data-link = "cart"]');
 
 const initCartButtonClick = () => {
@@ -7,8 +8,8 @@ const initCartButtonClick = () => {
   }
 
   const clickCartButtonHandler = (evt) => {
-    evt.target.classList.add('is-none');
-    const cartCount = evt.target.closest('.card-product').querySelector('.product-count');
+    evt.target.closest('button').classList.add('is-none');
+    const cartCount = evt.target.closest('[data-product]').querySelector('.product-count');
     cartCount.classList.add('is-showed');
     if (cartMenuItem) {
       let count = parseInt(cartMenuItem.getAttribute('data-count'));

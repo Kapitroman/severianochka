@@ -1,0 +1,31 @@
+mixin product-similar()
+
+  -
+    const productSimilar = [
+      {
+        image: ["content/product-similar", "product-similar-01", "png"],
+        price: "157,50 ₽"
+      },
+      {
+        image: ["content/product-similar", "product-similar-02", "png"],
+        price: "331,50 ₽"
+      },
+      {
+        image: ["content/product-similar", "product-similar-03", "png"],
+        price: "154,50 ₽"
+      },
+      {
+        image: ["content/product-similar", "product-similar-01", "png"],
+        price: "157,50 ₽"
+      }
+    ]
+
+  .product-similar
+    p.product-similar__title Похожие
+    ul.product-similar__products-list
+      each item in productSimilar
+        li.product-similar__product-item
+          a(href).product-similar__product-link
+            .product-similar__product-image
+              +picture(item.image[0], item.image[1], item.image[2], 172, 111, "изображение товара")
+            p.product-similar__product-price=item.price

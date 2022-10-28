@@ -1,0 +1,121 @@
+.product-slider {
+  display: flex;
+  height: 499px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+
+  overflow: hidden;
+
+  @include vp-1023 {
+    height: 251px;
+  }
+
+  li {
+    background-color: $color-default-white;
+
+    border-radius: 4px;
+  }
+
+  &__thumbs {
+    overflow: visible;
+
+    width: 64px;
+    margin-right: 16px;
+
+    @include vp-767 {
+      width: 72px;
+    }
+
+    li {
+      box-shadow: 1px 2px 4px 0px rgba($color-default-black, 0.1);
+
+      transition: box-shadow $trans-default;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover {
+          box-shadow: 1px 2px 4px 0px rgba($color-outrageous-orange, 0.2);
+          cursor: pointer;
+        }
+      }
+    }
+
+    img {
+      width: 64px;
+      height: 86px;
+      border-radius: 4px;
+
+      object-fit: contain;
+
+      @include vp-1023 {
+        height: 37px;
+      }
+
+      @include vp-767 {
+        width: 72px;
+        height: 43pxpx;
+      }
+    }
+  }
+
+  &__thumbs-wrapper {
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  &__main {
+
+    width: calc(100% - 64px - 16px);
+
+    box-shadow: 1px 2px 4px 0px rgba($color-default-black, 0.1);
+
+    transition: box-shadow $trans-default;
+
+    @include vp-767 {
+      width: calc(100% - 72px - 16px);
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover {
+        box-shadow: 1px 2px 4px 0px rgba($color-outrageous-orange, 0.2);
+        cursor: pointer;
+      }
+    }
+
+    img {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+    }
+  }
+
+  &__main-wrapper {
+    margin: 0;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  &__discount-label {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+
+    margin: 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    color: $color-default-white;
+
+    background-color: $color-outrageous-orange;
+
+    @include vp-1023 {
+      right: 10px;
+      top: 10px;
+    }
+  }
+}

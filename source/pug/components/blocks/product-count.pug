@@ -5,11 +5,11 @@ mixin product-count(options = {})
     form(action="#", method="GET")
       +btn({
         icon: {name: "icon-minus"}
-      })(data-count="decrease").btn--none-text.btn--middle-size.btn--green
+      })(data-count="decrease").btn--none-text.btn--green
       +custom-input({
         inputLabelHidden: "количество выбранного товара",
         inputValue: count
       })
       +btn({
         icon: {name: "icon-plus"}
-      })(data-count="increase").btn--none-text.btn--middle-size.btn--green
+      })(data-count="increase").btn--none-text.btn--green

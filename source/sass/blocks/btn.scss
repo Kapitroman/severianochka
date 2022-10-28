@@ -137,6 +137,25 @@
     }
   }
 
+  &--product-panel {
+    padding: 4px 8px;
+    border: none;
+
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-zambezi;
+
+    background-color: $color-transparent;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 4px 8px 16px 0px rgba($color-suva-grey, 0.2);
+        opacity: 0.7;
+      }
+    }
+  }
+
   &--green {
     border: 1px solid $color-mantis;
 
