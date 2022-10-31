@@ -30,13 +30,13 @@
   label {
     position: relative;
 
-    padding-left: 26px;
+    padding-left: 32px;
 
     cursor: pointer;
 
     span {
-      margin-bottom: 0;
-      margin-left: 0;
+      //margin-bottom: 0;
+      //margin-left: 0;
     }
 
     @media (hover: hover), screen and (min-width: 0\0) {
@@ -54,32 +54,69 @@
   }
 
   &--checkbox {
+    label {
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          .custom-toggle__icon {
+            &::before {
+              background-color: $color-transparent;
+            }
+          }
+
+          input:checked + .custom-toggle__icon {
+            &::before {
+              border-color: rgba($color-default-black, 0.8);
+            }
+          }
+        }
+      }
+    }
+
     .custom-toggle__icon {
       position: absolute;
-      top: 2px;
+      top: 0;
       left: 0;
 
-      width: 16px;
-      height: 16px;
+      width: 24px;
+      height: 24px;
 
-      border: 1px solid rgba($color-default-black, 0.2);
+      border: 1px solid $color-silver;
+      border-radius: 4px;
 
-      transition: border $trans-default;
+      background-color: $color-default-white;
+
+      transition: border $trans-default, background-color $trans-default;
 
       &::before {
         content: "";
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 4px;
+        left: 8px;
 
         width: 6px;
-        height: 6px;
+        height: 12px;
+        border: solid $color-transparent;
+        border-width: 0 2px 2px 0;
+
+        transform: rotate(45deg);
 
         background-color: $color-transparent;
 
-        transform: translate(-50%, -50%);
+        //transform: translate(-50%, -50%);
 
         transition: background-color $trans-default;
+      }
+    }
+
+    input:checked + .custom-toggle__icon {
+      border: 1px solid $color-hint-of-red;
+
+      background-color: $color-mantis;
+
+      &::before {
+        border-color: $color-default-white;
       }
     }
   }
@@ -130,9 +167,9 @@
       width: 46px;
       height: 24px;
       border-radius: 32px;
-      border: 1px solid #E0E0E0;
+      border: 1px solid $color-gainsboro;
 
-      background-color: #F8F8F8;
+      background-color: $color-white-smoke;
 
       transition: border $trans-default, background-color $trans-default;
 

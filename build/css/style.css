@@ -4459,41 +4459,49 @@ button,
 
 .custom-toggle label {
   position: relative;
-  padding-left: 26px;
+  padding-left: 32px;
   cursor: pointer;
-}
-
-.custom-toggle label span {
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .custom-toggle--checkbox .custom-toggle__icon {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-transition: border 0.3s ease;
-  -o-transition: border 0.3s ease;
-  transition: border 0.3s ease;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #bfbfbf;
+  border-radius: 4px;
+  background-color: #ffffff;
+  -webkit-transition: border 0.3s ease, background-color 0.3s ease;
+  -o-transition: border 0.3s ease, background-color 0.3s ease;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 
 .custom-toggle--checkbox .custom-toggle__icon::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 4px;
+  left: 8px;
   width: 6px;
-  height: 6px;
+  height: 12px;
+  border: solid rgba(255, 255, 255, 0);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
   background-color: rgba(255, 255, 255, 0);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+}
+
+.custom-toggle--checkbox input:checked + .custom-toggle__icon {
+  border: 1px solid #f3f2f1;
+  background-color: #70c05b;
+}
+
+.custom-toggle--checkbox input:checked + .custom-toggle__icon::before {
+  border-color: #ffffff;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -4537,8 +4545,8 @@ button,
   width: 46px;
   height: 24px;
   border-radius: 32px;
-  border: 1px solid #E0E0E0;
-  background-color: #F8F8F8;
+  border: 1px solid #e0e0e0;
+  background-color: #f8f8f8;
   -webkit-transition: border 0.3s ease, background-color 0.3s ease;
   -o-transition: border 0.3s ease, background-color 0.3s ease;
   transition: border 0.3s ease, background-color 0.3s ease;
@@ -5358,6 +5366,16 @@ a.header-logo.is-active {
   .custom-toggle label:hover .custom-toggle__icon::before,
   .custom-toggle label:focus .custom-toggle__icon::before {
     background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .custom-toggle--checkbox label:hover .custom-toggle__icon::before,
+  .custom-toggle--checkbox label:focus .custom-toggle__icon::before {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .custom-toggle--checkbox label:hover input:checked + .custom-toggle__icon::before,
+  .custom-toggle--checkbox label:focus input:checked + .custom-toggle__icon::before {
+    border-color: rgba(0, 0, 0, 0.8);
   }
 
   .custom-select__item[aria-selected="true"]:hover,
