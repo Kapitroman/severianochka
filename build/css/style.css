@@ -2194,8 +2194,23 @@ button,
 }
 
 .titles {
+  position: relative;
+  display: inline-block;
   margin: 0;
   font-weight: 700;
+}
+
+.titles span {
+  position: absolute;
+  left: calc(100% + 20px);
+  top: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #ff6633;
 }
 
 .titles--h1 {
