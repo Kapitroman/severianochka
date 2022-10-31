@@ -1,0 +1,43 @@
+.reviews-form {
+  form > * + * {
+    margin-top: 16px;
+
+    @include vp-767 {
+      margin-top: 8px;
+    }
+  }
+
+  &__send-rating {
+    display: flex;
+    align-items: center;
+
+    padding: 4px 0;
+  }
+
+  &__send-rating-text {
+    margin: 0;
+    margin-right: 16px;
+
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+
+  .custom-textarea {
+    label {
+      textarea {
+        height: 100px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__button {
+    width: 188px;
+
+    color: $color-outrageous-orange;
+
+    background-color: $color-tuft-bush;
+    border-color: $color-tuft-bush;
+  }
+}

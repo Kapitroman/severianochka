@@ -43,12 +43,7 @@ mixin card-product(options = {})
               span=price
         p.card-product__title=title
         if rating
-          .card-product__rating
-            each star in rating
-              if star
-                +icon("icon-star", 16, 16).is-rated
-              else
-                +icon("icon-star", 16, 16)
+          +rating-show(rating)
     if empty
       +btn({
          text: "Нет в наличии"

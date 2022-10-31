@@ -224,22 +224,6 @@
     }
   }
 
-  &__rating {
-    display: flex;
-
-    svg {
-      color: $color-silver;
-    }
-
-    svg.is-rated {
-      color: $color-outrageous-orange;
-    }
-
-    svg + svg {
-      margin-left: 4px;
-    }
-  }
-
   &__button {
     margin-top: auto;
   }

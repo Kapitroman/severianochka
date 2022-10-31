@@ -1,0 +1,19 @@
+mixin reviews(totalRate, reviews)
+  .reviews&attributes(attributes)
+    .reviews__rate-system
+      .reviews__total-rate
+        +rating-show(totalRate.rate)
+        span=totalRate.text
+      .reviews__system-wrapper
+        each item in totalRate.system
+          .reviews__rate-user-row
+            .reviews__rate-value=item[0]
+            +rating-show(item[1])
+            .reviews__rate-user-count=item[2]
+    .reviews__wrapper
+      ul.reviews__list
+        each item in reviews
+          +reviews-item(item)
+      +reviews-form()
+
+

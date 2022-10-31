@@ -1,0 +1,7 @@
+mixin rating-show(rate)
+  .rating-show
+    each star in rate
+      if star
+        +icon("icon-star", 16, 16).is-rated
+      else
+        +icon("icon-star", 16, 16)

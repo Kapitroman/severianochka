@@ -1,0 +1,15 @@
+mixin reviews-form()
+  .reviews-form
+    form(method="post", action="#")
+      .reviews-form__send-rating
+        p.reviews-form__send-rating-text Ваша оценка
+        +rating-field
+      +custom-textarea({
+        inputPlaceholder: "Отзыв",
+        inputName: "review",
+        inputLabelHidden: "Отзыв"
+      })
+      +btn({
+        text: "Отправить отзыв",
+        type: "submit"
+      }).btn--middle-size.reviews-form__button

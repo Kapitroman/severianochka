@@ -1,6 +1,7 @@
 mixin custom-textarea(options = {})
   - const inputLabel = options.inputLabel ? options.inputLabel : false
   - const inputPlaceholder = options.inputPlaceholder ? options.inputPlaceholder : false
+  - const inputLabelHidden = options.inputLabelHidden ? options.inputLabelHidden : false
   - const inputError = options.inputError ? options.inputError : false
   - const inputId = options.inputId ? options.inputId : false
   - const inputName = options.inputName ? options.inputName : false
@@ -12,6 +13,8 @@ mixin custom-textarea(options = {})
     label
       if inputLabel
         span.custom-textarea__label!=inputLabel
+      if inputLabelHidden
+        span.visually-hidden!=inputLabelHidden
       textarea(id=inputId, name=inputName, value=inputValue, minlength=inputMinLength, maxlength=inputMaxLength, placeholder=inputPlaceholder)
     if inputError
       .custom-textarea__error!=inputError

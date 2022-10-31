@@ -35,7 +35,7 @@ block variables
         price: "44,50 ₽",
         title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
       },
-       {
+      {
         picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
         price: "599,50 ₽",
         title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
@@ -140,6 +140,46 @@ block variables
       },
     ]
 
+  //- const totalRate = {
+      text: '4 из 5',
+      rate: [true, true, true, true, false],
+    }
+
+  -
+    const totalRate = {
+      text: "4 из 5",
+      rate: [true, true, true, true, false],
+      system: [
+        [5, [true, true, true, true, true], 1],
+        [4, [true, true, true, true, false], 1],
+        [3, [true, true, true, false, false], 0],
+        [2, [true, true, false, false, false], 0],
+        [1, [true, false, false, false, false], 1]
+      ]
+    }
+
+  -
+    const reviews = [
+      {
+        name: "Татьяна",
+        text: "приятный вкус",
+        date: ["2020-02-22", "22.02.2020"],
+        rating: [true, true, true, true, true]
+      },
+      {
+        name: "Мария",
+        text: "Масло среднее, есть вкуснее",
+        date: ["2020-02-22", "22.02.2020"],
+        rating: [true, true, true, true, false]
+      },
+      {
+        name: "Алексей",
+        text: "Покупали в том числе в этом весе. Масло по вкусу и органолептическим свойствам совершенно не похоже на натуральное. Упаковка выглядит как напечатанная на дешёвом принтере. На наш взгляд продукт является подделкой или контрафактной продукцией. Просим разобраться.",
+        date: ["2020-02-22", "22.02.2020"],
+        rating: [true, false, false, false, false]
+      },
+    ]
+
 block main
   main
     //- на странице запрещен "голый" код
@@ -161,6 +201,8 @@ block main
             +product-similar()
 
     +section-cards("С этим товаром покупают", "Все товары", cardProductsOther, true)
+
+    +section-reviews("Отзывы", totalRate, reviews)
 
     +section-cards("Акции", "Все акции", cardProductsActions, true)
 

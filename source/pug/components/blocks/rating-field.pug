@@ -1,0 +1,17 @@
+mixin rating-field()
+  .rating-field
+    input.visually-hidden(type="radio" id="rating_5" name="rating" value="5" data-rating-value="5")
+    label(for="rating_5") Отлично
+      +icon("icon-star", 24, 24)
+    input.visually-hidden(type="radio" id="rating_4" name="rating" value="4" data-rating-value="4")
+    label(for="rating_4") Хорошо
+      +icon("icon-star", 24, 24)
+    input.visually-hidden(type="radio" id="rating_3" name="rating" value="3" data-rating-value="3")
+    label(for="rating_3") Так&nbsp;себе
+      +icon("icon-star", 24, 24)
+    input.visually-hidden(type="radio" id="rating_2" name="rating" value="2" data-rating-value="2")
+    label(for="rating_2") Плохо
+      +icon("icon-star", 24, 24)
+    input.visually-hidden(type="radio" id="rating_1" name="rating" value="1" data-rating-value="1")
+    label(for="rating_1") Ужасно
+      +icon("icon-star", 24, 24)

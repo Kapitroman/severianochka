@@ -1,0 +1,37 @@
+.reviews-item {
+  &__user {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    line-height: 26px;
+
+    svg {
+      width: 36px;
+      height: 36px;
+      margin-right: 8px;
+    }
+  }
+
+  &__rate {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    .rating-show {
+      margin-right: 16px;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}

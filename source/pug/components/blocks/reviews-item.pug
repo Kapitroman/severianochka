@@ -1,0 +1,9 @@
+mixin reviews-item(review)
+  .reviews-item
+    .reviews-item__user
+      +icon("icon-user", 32, 32)
+      span=review.name
+    .reviews-item__rate
+      +rating-show(review.rating)
+      time(datetime=review.date[0]).reviews-item__date=review.date[1]
+    p.reviews-item__text=review.text

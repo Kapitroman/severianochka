@@ -23,22 +23,8 @@
     }
   }
 
-  &__rating {
-    display: flex;
-
+  .rating-show {
     margin-right: 8px;
-
-    svg {
-      color: $color-silver;
-    }
-
-    svg.is-rated {
-      color: $color-outrageous-orange;
-    }
-
-    svg + svg {
-      margin-left: 4px;
-    }
   }
 
   &__reviews {
