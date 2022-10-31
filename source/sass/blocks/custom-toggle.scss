@@ -2,12 +2,10 @@
   position: relative;
 
   display: flex;
-  //width: 500px;
-  //padding: 20px 0;
 
   &__error {
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: 0;
 
     color: $color-torch-red;
@@ -33,11 +31,6 @@
     padding-left: 32px;
 
     cursor: pointer;
-
-    span {
-      //margin-bottom: 0;
-      //margin-left: 0;
-    }
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
@@ -103,8 +96,6 @@
         transform: rotate(45deg);
 
         background-color: $color-transparent;
-
-        //transform: translate(-50%, -50%);
 
         transition: background-color $trans-default;
       }

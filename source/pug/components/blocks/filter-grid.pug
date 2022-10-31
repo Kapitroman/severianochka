@@ -46,9 +46,6 @@ mixin filter-grid()
               .filters__group
                 each item in filterGroup2
                   +custom-toggle(item).custom-toggle--toggle
-              .filters__group
-                each item in filterGroup2
-                  +custom-toggle(item).custom-toggle--checkbox
             +btn({
               text: "Применить",
               type: "submit"

@@ -1,5 +1,6 @@
 mixin custom-toggle(options = {})
   - const inputLabel = options.inputLabel ? options.inputLabel : false
+  - const inputLabelHidden = options.inputLabelHidden ? options.inputLabelHidden : false
   - const inputType = options.inputType ? options.inputType : "checkbox"
   - const inputError = options.inputError ? options.inputError : false
   - const inputId = options.inputId ? options.inputId : false
@@ -12,5 +13,7 @@ mixin custom-toggle(options = {})
       span.custom-toggle__icon
       if inputLabel
         span.custom-toggle__label!=inputLabel
+      if inputLabelHidden
+        span.visually-hidden!=inputLabelHidden
     if inputError
       .custom-toggle__error!=inputError

@@ -4440,7 +4440,7 @@ button,
 
 .custom-toggle__error {
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
   color: #ff1553;
   opacity: 0;
