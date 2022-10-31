@@ -3693,32 +3693,8 @@ button,
   margin-bottom: 8px;
 }
 
-.product-info__bonus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: 0;
+.product-info .product-bonus {
   margin-bottom: 8px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4px 8px;
-  font-size: 12px;
-  line-height: 18px;
-  color: #70c05b;
-}
-
-.product-info__bonus span {
-  padding: 0 8px;
-  text-align: center;
-}
-
-.product-info__bonus svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
 }
 
 .product-info__bell-button {
@@ -4003,6 +3979,37 @@ button,
   color: #ff6633;
   background-color: #fcd5ba;
   border-color: #fcd5ba;
+}
+
+.product-bonus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 8px;
+}
+
+.product-bonus p {
+  margin: 0;
+  padding: 0 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #70c05b;
+  text-align: center;
+}
+
+.product-bonus p span {
+  font-weight: 700;
+}
+
+.product-bonus svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .modal {

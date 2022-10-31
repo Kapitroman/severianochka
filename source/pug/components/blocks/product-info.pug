@@ -3,6 +3,7 @@ mixin product-info()
     const productInfo = {
       usefulPrice: "192,69 ₽",
       cardPrice: "108,99 ₽",
+      bonus: "10 бонусов",
       info: [
         {
           key: "Бренд",
@@ -36,9 +37,7 @@ mixin product-info()
         cart: true
       }).product-info__cart-button
       +product-count()
-      p.product-info__bonus
-        +icon("icon-smile", 24, 24)
-        span Вы получаете 10 бонусов
+      +product-bonus(productInfo.bonus)
       +btn({
         icon: {name: "icon-bell", left: true},
         text: "Уведомить о снижении цены"

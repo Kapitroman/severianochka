@@ -109,33 +109,8 @@
     margin-bottom: 8px;
   }
 
-  &__bonus {
-    display: flex;
-    align-items: center;
-
-    margin-top: 0;
+  .product-bonus {
     margin-bottom: 8px;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: 4px 8px;
-
-    font-size: 12px;
-    line-height: 18px;
-    color: $color-mantis;
-
-    span {
-      padding: 0 8px;
-
-      text-align: center;
-    }
-
-    svg {
-      width: 24px;
-      height: 24px;
-
-      margin-right: 8px;
-    }
   }
 
   &__bell-button {
