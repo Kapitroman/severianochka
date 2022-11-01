@@ -2153,6 +2153,15 @@ button,
   background-color: rgba(255, 255, 255, 0);
 }
 
+.btn--cart-grid-panel {
+  padding: 4px 8px;
+  border: none;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ff6633;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 .btn--green {
   border: 1px solid #70c05b;
   color: #ffffff;
@@ -4012,6 +4021,39 @@ button,
   margin-right: 8px;
 }
 
+.cart-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cart-grid__cards {
+  width: calc(100% - 272px - 40px);
+  margin-right: 40px;
+}
+
+.cart-grid__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.cart-grid__panel .custom-toggle {
+  margin-right: 40px;
+}
+
+.cart-grid__list {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 20px;
+  list-style: none;
+}
+
+.cart-grid__order-info {
+  width: 272px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -4463,6 +4505,12 @@ button,
   cursor: pointer;
 }
 
+.custom-toggle--checkbox label {
+  padding: 4px 8px 4px 32px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .custom-toggle--checkbox .custom-toggle__icon {
   position: absolute;
   top: 0;
@@ -4502,6 +4550,10 @@ button,
 
 .custom-toggle--checkbox input:checked + .custom-toggle__icon::before {
   border-color: #ffffff;
+}
+
+.custom-toggle--checkbox-without-label label {
+  padding: 0;
 }
 
 .custom-toggle--radio .custom-toggle__icon {
@@ -5233,6 +5285,13 @@ a.header-logo.is-active {
     opacity: 0.7;
   }
 
+  .btn--cart-grid-panel:hover,
+  .btn--cart-grid-panel:focus {
+    -webkit-box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+    box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
+    opacity: 0.7;
+  }
+
   .btn--green:hover,
   .btn--green:focus {
     -webkit-box-shadow: 4px 8px 16px 0px rgba(112, 192, 91, 0.2);
@@ -5923,6 +5982,15 @@ a.header-logo.is-active {
     margin-top: 32px;
   }
 
+  .cart-grid__cards {
+    width: calc(100% - 255px - 32px);
+    margin-right: 32px;
+  }
+
+  .cart-grid__order-info {
+    width: 255px;
+  }
+
   .banner-slider {
     margin-bottom: 60px;
   }
@@ -6407,6 +6475,23 @@ a.header-logo.is-active {
 
   .reviews-form form > * + * {
     margin-top: 8px;
+  }
+
+  .cart-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .cart-grid__cards {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+
+  .cart-grid__order-info {
+    width: 100%;
   }
 
   .modal__wrapper {

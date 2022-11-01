@@ -1,0 +1,91 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Северяночка" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "Корзина" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const userAuthorized = true
+
+  -
+    const cartCards = [
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+      {
+        picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
+        price: "599,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-03", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тосканпрпрпр рпропоап рапр оаыпоавп апорапроы",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-04", "png", 272, 160, "изображение продукта"],
+        price: "159,99 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+        rating: [true, true, true, false, false],
+      },
+      {
+        picture: ["content/products", "product-02", "png", 272, 160, "изображение продукта"],
+        price: "44,50 ₽",
+        title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
+      },
+    ]
+
+  -
+    const cartInfo = {
+      text: "4 из 5",
+      rate: [true, true, true, true, false],
+    }
+
+  -
+    const breadscrumbsData = [
+      {
+        href: "main.html",
+        text: "Главная",
+      },
+      {
+        text: "Корзина",
+      },
+    ]
+
+
+block main
+  main
+    +breadcrumbs(breadscrumbsData).breadcrumbs--margins
+    +title-h1("Корзина", 3).titles--h1
+
+    section.section
+      h2.visually-hidden Товары в корзине
+      .container
+        +cart-grid(cartCards, cartInfo)
+
+block modals

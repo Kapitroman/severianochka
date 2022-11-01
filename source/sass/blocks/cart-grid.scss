@@ -1,0 +1,57 @@
+.cart-grid {
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+
+  &__cards {
+    width: calc(100% - 272px - 40px);
+    margin-right: 40px;
+
+    @include vp-1023 {
+      width: calc(100% - 255px - 32px);
+      margin-right: 32px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__panel {
+    display: flex;
+
+    margin-bottom: 24px;
+
+    @include vp-1023 {
+
+    }
+
+    .custom-toggle {
+      margin-right: 40px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 20px;
+
+    list-style: none;
+  }
+
+  &__order-info {
+    width: 272px;
+
+    @include vp-1023 {
+      width: 255px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}
