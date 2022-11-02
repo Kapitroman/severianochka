@@ -10,12 +10,13 @@ const initCartButtonClick = () => {
   const clickCartButtonHandler = (evt) => {
     evt.target.closest('button').classList.add('is-none');
     const cartCount = evt.target.closest('[data-product]').querySelector('.product-count');
-    cartCount.classList.add('is-showed');
+    //cartCount.classList.add('is-showed');
+    cartCount.classList.remove('is-none');
     if (cartMenuItem) {
       let count = parseInt(cartMenuItem.getAttribute('data-count'));
       const labelCounter = cartMenuItem.querySelector('.user-menu-item__counter');
       if (count === 0) {
-        labelCounter.classList.add('is-showed');
+        labelCounter.classList.remove('is-none');
       }
       count++;
       cartMenuItem.setAttribute('data-count', count);

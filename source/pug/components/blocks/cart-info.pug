@@ -1,4 +1,35 @@
 mixin cart-info(cartInfo)
   .cart-info&attributes(attributes)
-    | hfhgdjdh hghb
-
+    if cartInfo.accumulation
+      .cart-info__accumulation
+        +custom-toggle({
+          inputLabel: `Списать ${cartInfo.accumulation}`,
+          inputChecked: true
+        }).custom-toggle--toggle
+        p.cart-info__accumulation-text На карте накоплено #{cartInfo.accumulation}
+      .cart-info__order-info
+        if cartInfo.count
+          p.cart-info__info-row
+            span.cart-info__count=cartInfo.count
+            span.cart-info__price=cartInfo.price
+        if cartInfo.discount
+          p.cart-info__info-row
+            span.cart-info__discount Скидка
+            span.cart-info__discount-value=cartInfo.discount
+      .cart-info__total
+        if cartInfo.count
+          p.cart-info__info-row
+            span.cart-info__total-text Итог
+            span.cart-info__total-value=cartInfo.total
+        if cartInfo.bonus
+          +product-bonus("100 бонусов")
+      .cart-info__button-wrap
+        if cartInfo.notice
+          +notice("Минимальная сумма заказа 1000р")
+          +btn({
+            text: "Оформить заказ"
+          }).disabled.btn--middle-size-screen-767
+        else
+          +btn({
+            text: "Оформить заказ"
+          }).btn--middle-size-screen-767

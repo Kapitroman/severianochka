@@ -1,2 +1,49 @@
-mixin cart-card(card)
-  .cart-card&attributes(attributes)
+mixin cart-card(options = {})
+
+  - const additionClass = options.additionClass ? `cart-card ${options.additionClass}`: "cart-card"
+  - const picture = options.picture ? options.picture : ["content/cart-products", "cart-01", "png", 80, 60, "изображение продукта"]
+  - const price = options.price ? options.price : "44,50 ₽"
+  - const discount = options.discount ? options.discount : false
+  - const total = options.total ? options.total : "44,50 ₽"
+  - const count = options.count ? options.count : 1
+  - const title = options.title ? options.title : "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»"
+  - const empty = options.empty ? options.empty : false
+  - const href = options.href ? options.href : "#"
+  - const check = options.check ? options.check : false
+
+  li(class=additionClass)&attributes(attributes)
+    if check
+      +custom-toggle({
+        inputChecked: true
+      }).custom-toggle--checkbox.custom-toggle--checkbox-without-label
+    .cart-card__wrapper-info
+      a.cart-card__picrure-link(href=href)
+        +picture(picture[0], picture[1], picture[2], picture[3], picture[4], picture[5])
+      .cart-card__info
+        a.cart-card__title-link(href=href)
+          h3=title
+        .cart-card__price-container
+          if discount
+            p.cart-card__price-card
+              span.cart-card__price-card-value=discount[1]
+              span.cart-card__price-card-text С картой
+            p.cart-card__price-usual
+              span.cart-card__price-usual-value=price
+              span.cart-card__price-usual-text Обычная
+            p.cart-card__unit за шт
+            p.cart-card__label-discount=discount[0]
+          else
+            p.cart-card__price-usual
+              span.cart-card__price-usual-value=price
+            p.cart-card__unit за шт
+    .cart-card__wrap-total
+      +product-count({
+        count: 2
+      }).product-count--middle-size.product-count--cart
+      if discount
+        p.cart-card__total-price
+          span.cart-card__price-discount=discount[2]
+          span.cart-card__price-total-usual=total
+      else
+        p.cart-card__total-price
+          span.cart-card__price-total-usual=total

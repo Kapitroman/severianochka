@@ -1,0 +1,94 @@
+.cart-info {
+  padding-top: 52px;
+
+  @include vp-767 {
+    padding-bottom: 0;
+  }
+
+  color: $color-suva-grey;
+
+  &__accumulation {
+    padding-bottom: 24px;
+    border-bottom: 2px solid $color-hint-of-red;
+
+    @include vp-1023 {
+      padding-bottom: 16px;
+    }
+
+    .custom-toggle {
+      margin-bottom: 20px;
+
+      color: $color-charcoal;
+    }
+  }
+
+  &__accumulation-text {
+    margin: 0;
+  }
+
+  &__order-info {
+    padding: 24px 0;
+    border-bottom: 2px solid $color-hint-of-red;
+
+    @include vp-1023 {
+      padding: 16px 0;
+    }
+  }
+
+  &__info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+
+    span:last-child {
+      margin-left: 20px;
+    }
+  }
+
+  &__info-row + .cart-info__info-row {
+    margin-top: 10px;
+  }
+
+  &__price {
+    color: $color-charcoal;
+  }
+
+  &__discount-value {
+    color: $color-outrageous-orange;
+    font-weight: 700;
+  }
+
+  &__total {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px 0;
+  }
+
+  &__total-value {
+    color: $color-charcoal;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+
+  .product-bonus {
+    margin: 0 auto;
+  }
+
+  &__button-wrap {
+    display: flex;
+    flex-direction: column;
+
+    .notice {
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

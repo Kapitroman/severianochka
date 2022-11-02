@@ -1,7 +1,7 @@
 mixin product-info()
   -
     const productInfo = {
-      usefulPrice: "192,69 ₽",
+      usualPrice: "192,69 ₽",
       cardPrice: "108,99 ₽",
       bonus: "10 бонусов",
       info: [
@@ -22,12 +22,12 @@ mixin product-info()
 
   .product-info
     .product-info__prices
-      p.product-info__useful-price
-        span.product-info__useful-value=productInfo.usefulPrice
-        span.product-info__useful-text Обычная цена
+      p.product-info__usual-price
+        span.product-info__usual-value=productInfo.usualPrice
+        span.product-info__usual-text Обычная цена
       p.product-info__card-price
         span.product-info__card-value=productInfo.cardPrice
-        span.product-info__useful-text
+        span.product-info__usual-text
           | С картой Северяночки
           +icon("icon-prompt", 24, 24)
     div(data-product).product-info__actions

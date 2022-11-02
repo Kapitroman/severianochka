@@ -17,6 +17,7 @@ import {initShopsMap} from './modules/init-map';
 import {initRangeSlider} from './modules/init-range-slider';
 import {toggleFilterMode} from './modules/toggle-filter-mode';
 import {initProductSlider} from './modules/init-product-slider';
+import {initFormReview} from './modules/init-form-review';
 
 // ---------------------------------
 
@@ -50,6 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initRangeSlider();
     toggleFilterMode();
     initProductSlider();
+    initFormReview();
   });
 });
 

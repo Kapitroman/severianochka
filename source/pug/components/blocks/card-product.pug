@@ -10,6 +10,7 @@ mixin card-product(options = {})
   - const rating = options.rating ? options.rating : false
   - const empty = options.empty ? options.empty : false
   - const favourite = options.favourite ? options.favourite : false
+  - const href = options.href ? options.href : "#"
 
   li(class=additionClass)&attributes(attributes)
     if favourite
@@ -24,7 +25,7 @@ mixin card-product(options = {})
       .card-product__cart-count
         +icon("icon-cart", 24, 24)
         span=order
-    a.card-product__link-wrap(href="#")
+    a.card-product__link-wrap(href=href)
       .card-product__image
         +picture(picture[0], picture[1], picture[2], picture[3], picture[4], picture[5])
         if discount
@@ -56,10 +57,10 @@ mixin card-product(options = {})
         }).btn--middle-size.btn--green-transparent.card-product__button.is-none
         +product-count({
           count: count
-        }).is-showed.product-count--middle-size
+        }).product-count--middle-size
       else
         +btn({
           text: "В корзину",
           cart: true
         }).btn--middle-size.btn--green-transparent.card-product__button
-        +product-count().product-count--middle-size
+        +product-count().product-count--middle-size.is-none

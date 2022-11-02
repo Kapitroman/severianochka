@@ -3,13 +3,13 @@ mixin cart-grid(cards, info)
     .cart-grid__cards
       .cart-grid__panel
         +custom-toggle({
-          inputLabel: "Выделить всё"
+          inputLabel: "Выделить всё",
+          inputChecked: true
         }).custom-toggle--checkbox
         +btn({
           text: "Удалить выбранные"
         }).btn--cart-grid-panel
       ul.cart-grid__list
-        | ddasd
         each card in cards
           +cart-card(card)
     +cart-info(info).cart-grid__order-info

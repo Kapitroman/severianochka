@@ -1,0 +1,245 @@
+.cart-card {
+  position: relative;
+
+  display: flex;
+
+  border-radius: 4px;
+
+  box-shadow: 1px 2px 4px 0 rgba($color-default-black, 0.1);
+
+  transition: box-shadow $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      box-shadow: 4px 8px 16px 0 rgba($color-outrageous-orange, 0.2)
+    }
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+
+  .custom-toggle {
+    position: absolute;
+    left: 8px;
+    top: -8px;
+  }
+
+  &__wrapper-info {
+    display: flex;
+    flex-grow: 1;
+
+    margin-right: 16px;
+  }
+
+  &__picrure-link {
+    flex-shrink: 0;
+
+    margin-bottom: auto;
+    margin-right: 8px;
+
+    background-color: $color-default-white;
+
+    box-shadow: 1px 2px 4px 0 rgba($color-default-black, 0.1);
+
+    transition: box-shadow $trans-default;
+
+    img {
+      width: 80px;
+      height: 60px;
+
+      border-radius: 4px;
+
+      object-fit: contain;
+
+      @include vp-767 {
+        width: 104px;
+        height: 78px;
+      }
+    }
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        box-shadow: 1px 2px 4px 0 rgba($color-outrageous-orange, 0.2)
+      }
+    }
+  }
+
+  &__info {
+    padding: 10px 0;
+  }
+
+  &__title-link {
+    display: block;
+
+    margin-bottom: 10px;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        h3 {
+          color: $color-outrageous-orange;
+        }
+      }
+    }
+
+    h3 {
+      margin: 0;
+
+      color : $color-charcoal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      transition: color $trans-default;
+
+      @include vp-767 {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__price-container {
+    display: flex;
+
+    & > * + * {
+      margin-left: 8px;
+    }
+
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-zambezi;
+  }
+
+  &__price-card,
+  &__price-usual,
+  &__unit,
+  &__label-discount {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__price-card,
+  &__price-usual {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price-card-value,
+  &__price-usual-value {
+    font-weight: 700;
+    color: $color-charcoal;
+  }
+
+  &__unit,
+  &__price-card-text,
+  &__price-usual-text {
+    @include vp-767 {
+      font-size: 8px;
+      line-height: 12px;
+    }
+  }
+
+  &__price-card + .cart-card__price-usual .cart-card__price-usual-value {
+    color: $color-zambezi;
+    font-weight: 400;
+  }
+
+  &__label-discount {
+    margin-bottom: auto;
+
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    color: $color-default-white;
+    font-size: 16px;
+    line-height: 24px;
+
+    background-color: $color-outrageous-orange;
+  }
+
+  &__wrap-total {
+    display: flex;
+    flex-shrink: 0;
+
+    width: 236px;
+
+    @include vp-1023 {
+      flex-direction: column;
+
+      width: 128px;
+      padding: 4px;
+    }
+
+    @include vp-767 {
+      flex-direction: row;
+
+      width: 100%;
+      padding: 8px;
+    }
+
+    .product-count {
+      max-width: 120px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      @include vp-1023 {
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+
+      @include vp-767 {
+        max-width: 141px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__total-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin: 0;
+    margin-left: auto;
+    padding: 8px;
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
+
+  &__price-total-usual,
+  &__price-discount {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__price-discount + .cart-card__price-total-usual {
+    color: $color-suva-grey;
+    text-decoration: line-through;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

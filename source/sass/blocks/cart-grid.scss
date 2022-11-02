@@ -27,7 +27,7 @@
     margin-bottom: 24px;
 
     @include vp-1023 {
-
+      margin-bottom: 16px;
     }
 
     .custom-toggle {
@@ -41,6 +41,14 @@
     padding-right: 20px;
 
     list-style: none;
+
+    @include vp-1023 {
+      padding-right: 0;
+    }
+
+    .cart-card + .cart-card {
+      margin-top: 24px;
+    }
   }
 
   &__order-info {
