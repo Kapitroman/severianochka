@@ -62,7 +62,8 @@
     background-color: $color-hint-of-red;
   }
 
-  .noUi-base, .noUi-connects {
+  .noUi-base,
+  .noUi-connects {
     width: calc(100% - 24px);
     margin: 0 auto;
   }
@@ -89,7 +90,7 @@
 
     &:hover {
       cursor: pointer;
-      box-shadow: 2px 4px 8px 0px #70C05B33;
+      box-shadow: 2px 4px 8px 0 rgba($color-mantis, 0.2);
     }
   }
 

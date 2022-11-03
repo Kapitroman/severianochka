@@ -90,19 +90,14 @@ block variables
 
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
+
     +breadcrumbs(breadscrumbsData).breadcrumbs--margins
     +title-h1("Избранное").titles--h1
-    //-.container
-      h1.titles.titles--h1.title--margin-bottom Избранное
+
     section.section
       h2.visually-hidden Избранные товары с фильтром с фильтром
       .container
         +filter-grid()
-    //-+simple-section("Избранные товары с фильтром с фильтром")
-      +filter-grid()
-
 
   script
     include ../../js/inline/wNumb.js

@@ -1,29 +1,29 @@
 .rating-field {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  color: $color-silver;
+
+  label {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    align-items: center;
 
-    color: $color-silver;
+    font-size: 0;
 
-    label {
-      display: flex;
-      align-items: center;
-
-      font-size: 0;
-
-      cursor: pointer;
-    }
-
-    label + label {
-      margin-left: 4px;
-    }
-
-    input:checked ~ label svg {
-      color: $color-outrageous-orange;
-    }
-
-    label:hover svg,
-    label:hover ~ label svg {
-      color: $color-outrageous-orange;
-    }
+    cursor: pointer;
   }
+
+  label + label {
+    margin-left: 4px;
+  }
+
+  input:checked ~ label svg {
+    color: $color-outrageous-orange;
+  }
+
+  label:hover svg,
+  label:hover ~ label svg {
+    color: $color-outrageous-orange;
+  }
+}

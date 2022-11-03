@@ -1,6 +1,6 @@
 const dataShops = [
   {
-    container: "map1",
+    container: 'map1',
     objects: [
       {
         ordinates: [55.80870623, 37.49211736],
@@ -33,11 +33,11 @@ const dataShops = [
         iconImageHref: 'img/svg/icon-shop-pelys.svg',
         iconImageSize: [82, 32],
         iconImageOffset: [-41, -32],
-      },
+      }
     ],
   },
   {
-    container: "map2",
+    container: 'map2',
     objects: [
       {
         ordinates: [55.80870623, 37.49211736],
@@ -70,11 +70,11 @@ const dataShops = [
         iconImageHref: 'img/svg/icon-shop-pelys.svg',
         iconImageSize: [82, 32],
         iconImageOffset: [-41, -32],
-      },
+      }
     ],
   },
   {
-    container: "map3",
+    container: 'map3',
     objects: [
       {
         ordinates: [55.80870623, 37.49211736],
@@ -107,11 +107,11 @@ const dataShops = [
         iconImageHref: 'img/svg/icon-shop-pelys.svg',
         iconImageSize: [82, 32],
         iconImageOffset: [-41, -32],
-      },
+      }
     ],
   },
   {
-    container: "map4",
+    container: 'map4',
     objects: [
       {
         ordinates: [55.80870623, 37.49211736],
@@ -144,7 +144,7 @@ const dataShops = [
         iconImageHref: 'img/svg/icon-shop-pelys.svg',
         iconImageSize: [82, 32],
         iconImageOffset: [-41, -32],
-      },
+      }
     ],
   }
 ];
@@ -159,9 +159,9 @@ const initShopsMapSection = (dataShopsItem) => {
 
   function init() {
     const myMap = new ymaps.Map(dataShopsItem.container, {
-        center: [55.80503253, 37.51511999],
-        zoom: 13,
-        controls: [],
+      center: [55.80503253, 37.51511999],
+      zoom: 13,
+      controls: [],
     });
 
     dataShopsItem.objects.forEach((item) => {
@@ -179,14 +179,14 @@ const initShopsMapSection = (dataShopsItem) => {
       });
 
       myMap.geoObjects.add(myPlacemark);
-    })
+    });
   }
 };
 
 const initShopsMap = () => {
   dataShops.forEach((dataItem) => {
     initShopsMapSection(dataItem);
-  })
-}
+  });
+};
 
 export {initShopsMap};

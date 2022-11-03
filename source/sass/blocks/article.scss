@@ -4,24 +4,16 @@
 
   width: 376px;
   height: auto;
-  //padding: 0 8px 8px 8px;
   border-radius: 4px;
 
   background-color: $color-default-white;
 
-  box-shadow: 1px 2px 4px 0px rgba($color-default-black, 0.1);
+  box-shadow: 1px 2px 4px 0 rgba($color-default-black, 0.1);
 
   transition: box-shadow $trans-default;
 
   &:hover {
-    box-shadow: 4px 8px 16px 0px rgba($color-outrageous-orange, 0.2);
-    /*
-    .card-product__button {
-      border-color: $color-outrageous-orange;
-      background-color: $color-outrageous-orange;
-      color: $color-default-white;
-    }
-    */
+    box-shadow: 4px 8px 16px 0 rgba($color-outrageous-orange, 0.2);
   }
 
   &__image {

@@ -12,7 +12,7 @@
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
-      box-shadow: 4px 8px 16px 0 rgba($color-outrageous-orange, 0.2)
+      box-shadow: 4px 8px 16px 0 rgba($color-outrageous-orange, 0.2);
     }
   }
 
@@ -62,7 +62,7 @@
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
-        box-shadow: 1px 2px 4px 0 rgba($color-outrageous-orange, 0.2)
+        box-shadow: 1px 2px 4px 0 rgba($color-outrageous-orange, 0.2);
       }
     }
   }
@@ -88,7 +88,7 @@
     h3 {
       margin: 0;
 
-      color : $color-charcoal;
+      color: $color-charcoal;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
@@ -165,6 +165,11 @@
     line-height: 24px;
 
     background-color: $color-outrageous-orange;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__wrap-total {

@@ -2,7 +2,7 @@ const userAuthorized = document.querySelector('.user-authorized');
 const breakpoint = window.matchMedia('(max-width:1279px)');
 
 const showAuthorizedMenu = () => {
-  if (!userAuthorized ) {
+  if (!userAuthorized) {
     return;
   }
 
@@ -47,6 +47,6 @@ const showAuthorizedMenu = () => {
 
   breakpoint.addListener(breakpointChecker);
   breakpointChecker();
-}
+};
 
 export {showAuthorizedMenu};

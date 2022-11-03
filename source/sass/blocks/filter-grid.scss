@@ -8,6 +8,14 @@
     @include vp-1023 {
       display: none;
     }
+
+    .active-filters-panel.is-showed {
+      display: none;
+
+      @include vp-1023 {
+        display: flex;
+      }
+    }
   }
 
   .filters.modal {
@@ -75,16 +83,6 @@
   .active-filters-panel.is-showed {
     @include vp-1023 {
       display: none;
-    }
-  }
-
-  .filters {
-    .active-filters-panel.is-showed {
-      display: none;
-
-      @include vp-1023 {
-        display: flex;
-      }
     }
   }
 }

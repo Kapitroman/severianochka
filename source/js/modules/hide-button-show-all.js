@@ -13,17 +13,15 @@ const hideButtonShowAll = (slider, numberItemsArray) => {
         sliderButton.classList.remove('is-none');
       }
     }
-  }
+  };
 
   const breakpointChecker = () => {
     if (breakpointSm.matches) {
       compareNumberItems(numberItemsArray[0]);
-    }
-    else {
+    } else {
       if (breakpointMd.matches) {
         compareNumberItems(numberItemsArray[1]);
-      }
-      else {
+      } else {
         compareNumberItems(numberItemsArray[2]);
       }
     }
@@ -32,6 +30,6 @@ const hideButtonShowAll = (slider, numberItemsArray) => {
   breakpointSm.addListener(breakpointChecker);
   breakpointMd.addListener(breakpointChecker);
   breakpointChecker();
-}
+};
 
 export {hideButtonShowAll};

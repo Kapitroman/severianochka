@@ -1,12 +1,6 @@
 const favouriteMenuItem = document.querySelector('[data-link = "favourite"]');
 
 const initFavouriteClick = () => {
-  /*
-  if (!favouriteMenuItem) {
-    return;
-  }
-  */
-
   const clickFavouriteButtonHandler = (evt) => {
     const targetButton = evt.target.closest('.card-product__favourite');
     if (!targetButton) {
@@ -16,7 +10,7 @@ const initFavouriteClick = () => {
     if (targetButton.classList.contains('is-actived')) {
       targetButton.classList.remove('is-actived');
       if (favouriteMenuItem) {
-        let count = parseInt(favouriteMenuItem.getAttribute('data-count'));
+        let count = parseInt(favouriteMenuItem.getAttribute('data-count'), 10);
         count--;
         favouriteMenuItem.setAttribute('data-count', count);
         const labelCounter = favouriteMenuItem.querySelector('.user-menu-item__counter');
@@ -28,7 +22,7 @@ const initFavouriteClick = () => {
     } else {
       targetButton.classList.add('is-actived');
       if (favouriteMenuItem) {
-        let count = parseInt(favouriteMenuItem.getAttribute('data-count'));
+        let count = parseInt(favouriteMenuItem.getAttribute('data-count'), 10);
         const labelCounter = favouriteMenuItem.querySelector('.user-menu-item__counter');
         if (count === 0) {
           labelCounter.classList.add('is-showed');
@@ -41,6 +35,6 @@ const initFavouriteClick = () => {
   };
 
   document.addEventListener('click', clickFavouriteButtonHandler);
-}
+};
 
 export {initFavouriteClick};

@@ -93,7 +93,7 @@
 
   &__list-links {
     margin: 0;
-    padding: 0px 8px 8px 16px;
+    padding: 0 8px 8px 16px;
 
     list-style: none;
   }
@@ -128,7 +128,7 @@
       visibility: visible;
       height: auto;
 
-      box-shadow: 4px 8px 16px 0px rgba($color-default-black, 0.1);
+      box-shadow: 4px 8px 16px 0 rgba($color-default-black, 0.1);
     }
 
     .user-authorized__arrow-container {

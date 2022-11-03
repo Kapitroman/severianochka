@@ -1,6 +1,6 @@
 import noUiSlider from 'nouislider';
 
-const  rangeFilter = document.querySelector('.range-filter');
+const rangeFilter = document.querySelector('.range-filter');
 
 const initRangeSlider = () => {
   if (!rangeFilter) {
@@ -17,11 +17,11 @@ const initRangeSlider = () => {
     start: [100, 900],
     connect: true,
     range: {
-        'min': 0,
-        'max': 1000
+      'min': 0,
+      'max': 1000,
     },
     format: wNumb({
-      decimals: 0
+      decimals: 0,
     }),
   });
 
@@ -33,7 +33,7 @@ const initRangeSlider = () => {
   inputs.forEach(function (input, handle) {
 
     input.addEventListener('change', function () {
-        slider.noUiSlider.setHandle(handle, this.value);
+      slider.noUiSlider.setHandle(handle, this.value);
     });
   });
 

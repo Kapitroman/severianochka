@@ -118,15 +118,15 @@ mixin header(headerMods, currentUrl)
           }).btn--none-text-width-size.btn--middle-size.btn--green
           .catalog-menu
             .catalog-menu__list-wrap
-             .catalog-menu__list-shadow
-              .container
-                ul.catalog-menu__list
-                  each link in catalogLinks
-                    li.catalog-menu__item
-                      if(currentUrl === link.text)
-                        a.catalog-menu__link.is-active=link.text
-                      else
-                        a.catalog-menu__link(href=link.href)=link.text
+              .catalog-menu__list-shadow
+                .container
+                  ul.catalog-menu__list
+                    each link in catalogLinks
+                      li.catalog-menu__item
+                        if(currentUrl === link.text)
+                          a.catalog-menu__link.is-active=link.text
+                        else
+                          a.catalog-menu__link(href=link.href)=link.text
 
         .search
           form(method="get", action="#")

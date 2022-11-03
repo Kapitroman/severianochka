@@ -36,7 +36,7 @@ mixin product-info()
         text: "В корзину",
         cart: true
       }).product-info__cart-button
-      +product-count()
+      +product-count().is-none
       +product-bonus(productInfo.bonus)
       +btn({
         icon: {name: "icon-bell", left: true},

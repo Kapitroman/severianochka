@@ -7,8 +7,7 @@
 
   min-height: 72px;
 
-  box-shadow: 2px 4px 8px 0px rgba($color-default-black, 0.1), 0px 0px 0px 8px rgba($color-default-white, 0.7);
-  //box-shadow: 2px 4px 8px 0px rgba($color-default-black, 0.1);
+  box-shadow: 2px 4px 8px 0 rgba($color-default-black, 0.1), 0 0 0 8px rgba($color-default-white, 0.7);
 
   background-color: $color-default-white;
 
@@ -16,8 +15,3 @@
     min-height: 56px;
   }
 }
-/*
-.header.is-opened {
-  box-shadow: 2px 4px 8px 0px rgba($color-default-black, 0.1), 0px 0px 0px 8px $color-default-white;
-}
-*/

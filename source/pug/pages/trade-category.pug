@@ -35,7 +35,7 @@ block variables
         price: "44,50 ₽",
         title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
       },
-       {
+      {
         picture: ["content/products", "product-05", "png", 272, 160, "изображение продукта"],
         price: "599,50 ₽",
         title: "Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»",
@@ -97,40 +97,12 @@ block variables
       },
     ]
 
-  //-
-    const filterGroup1 = [
-      {
-        inputLabel: "Молоко",
-        inputName: "milk",
-        inputChecked: true
-      },
-      {
-        inputLabel: "Сливки",
-        inputName: "cream",
-      },
-      {
-        inputLabel: "Яйцо",
-        inputName: "egg",
-      },
-    ]
-
-  //-
-    const filterGroup2 = [
-      {
-        inputLabel: "В наличии",
-        inputName: "in-stock",
-        inputChecked: true
-      },
-    ]
-
 block main
   main
-    //- на странице запрещен "голый" код
-    //- все блоки вставляются из папки pug/components/blocks
+
     +breadcrumbs(breadscrumbsData).breadcrumbs--margins
     +title-h1("Молоко, сыр, яйцо").titles--category
-    //-.container
-      h1.titles.titles--h1.title--margin-bottom Молоко, сыр, яйцо
+
     section.section
       h2.visually-hidden Товары категории с фильтром
       .container

@@ -17,11 +17,6 @@
     grid-template-rows: auto;
     gap: 40px;
 
-    //margin: 0;
-    //padding-left: 0;
-
-    //list-style: none;
-
     @include vp-1023 {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 32px;

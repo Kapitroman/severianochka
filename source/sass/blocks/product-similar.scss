@@ -51,14 +51,14 @@
   &__product-link {
     display: block;
 
-    box-shadow: 1px 2px 4px 0px rgba($color-default-black, 0.1);
+    box-shadow: 1px 2px 4px 0 rgba($color-default-black, 0.1);
 
     transition: box-shadow $trans-default;
 
     @media (hover: hover), screen and (min-width: 0\0) {
       &:hover,
       &:focus {
-        box-shadow: 1px 2px 4px 0px rgba($color-outrageous-orange, 0.2);
+        box-shadow: 1px 2px 4px 0 rgba($color-outrageous-orange, 0.2);
       }
     }
   }

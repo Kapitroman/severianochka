@@ -1,8 +1,7 @@
 const productSlider = document.querySelector('.product-slider');
 
 const initSwiper = (slider) => {
-// eslint-disable-next-line no-undef
-
+  // eslint-disable-next-line no-undef
   const mainSlider = slider.querySelector('.product-slider__main');
   const thumbsSlider = slider.querySelector('.product-slider__thumbs');
 
@@ -12,9 +11,9 @@ const initSwiper = (slider) => {
     direction: 'vertical',
     breakpoints: {
       768: {
-        spaceBetween: 16
+        spaceBetween: 16,
       },
-    }
+    },
   });
 
   const swiper2 = new Swiper(mainSlider, {
