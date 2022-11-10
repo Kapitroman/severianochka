@@ -10,9 +10,6 @@ const initSwiper = (slider) => {
       delay: 3000,
     },
   });
-
-  /* swiper = new Swiper(slider, {})*/
-
 };
 
 const initBannerSlider = () => {

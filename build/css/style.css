@@ -2348,9 +2348,29 @@ button,
   flex-direction: column;
   width: 272px;
   height: auto;
-  padding: 0 8px 8px 8px;
   border-radius: 4px;
   background-color: #ffffff;
+  /*
+  box-shadow: 1px 2px 4px 0 rgba($color-default-black, 0.1);
+
+  transition: box-shadow $trans-default;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover{
+      box-shadow: 4px 8px 16px 0 rgba($color-outrageous-orange, 0.2);
+
+      .card-product__button {
+        border-color: $color-outrageous-orange;
+        background-color: $color-outrageous-orange;
+        color: $color-default-white;
+      }
+    }
+  }
+  */
+}
+
+.card-product__shadow-wrap {
+  padding: 0 8px 8px 8px;
   -webkit-box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: -webkit-box-shadow 0.3s ease;
@@ -2358,17 +2378,6 @@ button,
   -o-transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
-}
-
-.card-product:hover {
-  -webkit-box-shadow: 4px 8px 16px 0 rgba(255, 102, 51, 0.2);
-  box-shadow: 4px 8px 16px 0 rgba(255, 102, 51, 0.2);
-}
-
-.card-product:hover .card-product__button {
-  border-color: #ff6633;
-  background-color: #ff6633;
-  color: #ffffff;
 }
 
 .card-product__favourite {
@@ -2410,6 +2419,7 @@ button,
 }
 
 .card-product__link-wrap {
+  display: block;
   margin-bottom: 8px;
 }
 
@@ -2437,8 +2447,8 @@ button,
 
 .card-product__discount-label {
   position: absolute;
-  left: 10;
-  bottom: 10;
+  left: 10px;
+  bottom: 10px;
   margin: 0;
   padding: 4px 8px;
   border-radius: 4px;
@@ -2521,6 +2531,7 @@ button,
 }
 
 .card-product__button {
+  width: 100%;
   margin-top: auto;
 }
 
@@ -2785,7 +2796,7 @@ button,
   list-style: none;
 }
 
-.special-banners--grid .special-banners__wrapper .card-product {
+.special-banners--grid .special-banners__wrapper .special-banner {
   width: 100%;
 }
 
@@ -4733,6 +4744,7 @@ button,
 .custom-input--search label input,
 .custom-textarea--search label input {
   padding: 7px 41px 7px 15px;
+  background-color: #ffffff;
 }
 
 .custom-toggle {
@@ -5590,6 +5602,17 @@ a.header-logo.is-active {
   .banner-2:hover,
   .banner-2:focus {
     opacity: 0.7;
+  }
+
+  .card-product__shadow-wrap:hover {
+    -webkit-box-shadow: 4px 8px 16px 0 rgba(255, 102, 51, 0.2);
+    box-shadow: 4px 8px 16px 0 rgba(255, 102, 51, 0.2);
+  }
+
+  .card-product__shadow-wrap:hover .card-product__button {
+    border-color: #ff6633;
+    background-color: #ff6633;
+    color: #ffffff;
   }
 
   .card-product__favourite:hover,
@@ -6517,6 +6540,11 @@ a.header-logo.is-active {
 
   .banner-2__line {
     height: 10px;
+  }
+
+  .card-product__discount-label {
+    font-size: 12px;
+    line-height: 18px;
   }
 
   .card-product__prices {
