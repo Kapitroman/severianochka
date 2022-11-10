@@ -83,10 +83,12 @@ mixin card-product(options = {})
     if favourite
       +btn({
         icon: {name: "icon-heart"},
+        ariaLabel: "избранное"
       }).btn--none-text.btn--middle-size.card-product__favourite.is-actived
     else
       +btn({
         icon: {name: "icon-heart"},
+        ariaLabel: "избранное"
       }).btn--none-text.btn--middle-size.card-product__favourite
     .card-product__shadow-wrap
      if order

@@ -7,8 +7,9 @@ mixin btn(options = {})
   - const type = options.type || tag === "button" ? options.type || "button" : false;
   - const target = options.isExternal ? "_blank" : false;
   - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+  - const ariaLabel = options.ariaLabel || false;
 
-  #{tag}.btn(href=href, target=target, rel=rel, type=type, data-button=cart)&attributes(attributes)
+  #{tag}.btn(href=href, target=target, rel=rel, type=type, aria-label=ariaLabel, data-button=cart)&attributes(attributes)
     if icon
       if text
         if icon.left

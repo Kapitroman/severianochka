@@ -108,13 +108,15 @@ mixin header(headerMods, currentUrl)
           if (currentUrl === "Каталог")
             +btn({
               text: "Каталог",
-              icon: {name: "icon-catalog", left: true}
+              icon: {name: "icon-catalog", left: true},
+              ariaLabel: "каталог"
             }).btn--none-text-width-size.btn--middle-size.btn--green.disabled
           else
             +btn({
               text: "Каталог",
               href: "catalog.html",
-              icon: {name: "icon-catalog", left: true}
+              icon: {name: "icon-catalog", left: true},
+              ariaLabel: "каталог"
           }).btn--none-text-width-size.btn--middle-size.btn--green
           .catalog-menu
             .catalog-menu__list-wrap
@@ -137,7 +139,7 @@ mixin header(headerMods, currentUrl)
               inputName: "search-good",
               inputSize: 3
             }).custom-input--search
-            +btn({icon: {name: "icon-search"}, type: "submit"}).btn--none-text.btn--middle-size.btn--grey.btn--transparent
+            +btn({icon: {name: "icon-search"}, type: "submit", ariaLabel: "поиск"}).btn--none-text.btn--middle-size.btn--grey.btn--transparent
 
         ul.main-nav__user-menu
             each link in headerLinks
@@ -183,7 +185,8 @@ mixin header(headerMods, currentUrl)
                       +picture("content", "avatar", "png", 40, 40, "аватарка пользователя")
                       span Алексей
                     +btn({
-                      icon: {name: "icon-arrow"}
+                      icon: {name: "icon-arrow"},
+                      ariaLabel: "содержит опции"
                     }).btn--transparent.btn--middle-size.user-authorized__arrow-container
                   .user-authorized__wrap-links
                     ul.user-authorized__list-links

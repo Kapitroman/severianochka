@@ -4,12 +4,14 @@ mixin product-count(options = {})
   .product-count&attributes(attributes)
     form(action="#", method="GET")
       +btn({
-        icon: {name: "icon-minus"}
+        icon: {name: "icon-minus"},
+        ariaLabel: "уменьшить"
       })(data-count="decrease").btn--none-text.btn--green
       +custom-input({
         inputLabelHidden: "количество выбранного товара",
         inputValue: count
       })
       +btn({
-        icon: {name: "icon-plus"}
+        icon: {name: "icon-plus"},
+        ariaLabel: "увеличить"
       })(data-count="increase").btn--none-text.btn--green
